@@ -1,0 +1,316 @@
+.reviews {
+    & .reviews-btn.active {
+      border: 1px solid #318ECC;
+      background-color: #fff;
+      color: $text;
+    
+  }
+
+}
+
+.reviews-btn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 260px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
+	padding: 0;
+  background: $blue-mid2;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid $blue-mid2;
+  &:hover {
+    color: #ffffff;
+    border: 1px solid $blue-mid;
+    background-color: $blue-mid;
+  }
+  
+}
+
+.reviews__form {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  padding-top: 4px;
+  padding-bottom: 30px;
+  @media (max-width: 574px) {
+      max-width: 100%;
+    }
+}
+
+.reviews-form__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+@media (max-width: 767px) {
+  gap: 10px;
+}
+@media (max-width: 574px) {
+  flex-wrap: wrap;
+}
+}
+
+.reviews-form__inputs {
+  width: 50%;
+  @media (max-width: 574px) {
+    width: 100%;
+  }
+  & .validate-error {
+    top: 14px;
+    @media (max-width: 574px) {
+      top: 12px;
+    }
+  }
+
+  & .input {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 13px;
+    border: 1px solid #E4E3E4;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    color: $text;
+    @media (max-width: 574px) {
+      height: 40px;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $text;
+    }
+
+    &::-moz-placeholder {
+      color: $text;
+    }
+
+    &:-ms-input-placeholder {
+      color: $text;
+    }
+
+    &:-moz-placeholder {
+      color: $text;
+    }
+  }
+
+  & .textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    padding: 15px 20px;
+    resize: none;
+    border: 1px solid #E4E3E4;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 12px;
+    line-height: 16px;
+    color: $text;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        overflow-y: scroll;
+        background: transparent;
+        width: 3px;
+        transition: linear .2s;
+        box-shadow: 1px 0 0 transparent;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background: $blue-mid;
+        border-radius: 0;
+        width: 3px;
+        transition: linear .2s;
+        cursor: grab;
+      }
+      
+    @media (max-width: 574px) {
+     padding: 15px;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $text;
+    }
+
+    &::-moz-placeholder {
+      color: $text;
+    }
+
+    &:-ms-input-placeholder {
+      color: $text;
+    }
+
+    &:-moz-placeholder {
+      color: $text;
+    }
+  }
+ & .btn {
+   height: 45px;
+   background-color: $blue;
+   color: #ffffff;
+  font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    outline: none;
+    &:hover {
+        background-color: $blue-mid;
+    }
+ }
+}
+
+.reviews-form__rate {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  @media (max-width: 574px) {
+    margin-top: 15px;
+   padding-left: 15px;
+  }
+  & span {
+   margin-right: 20px;
+    font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: $text;
+  } 
+    .rating>input~label {
+      cursor: pointer;
+    }
+  
+    .rating>input {
+      display: none;
+    }
+  
+    .rating>label:before {
+      display: block;
+      content: "";
+      width: 15px;
+      height: 15px;
+      // star-empty
+      -webkit-mask: url("../images/icons/star-empty.svg");
+      mask: url("../images/icons/star-empty.svg");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      background-color: $blue-mid;
+      margin-right: 5px;
+    }
+  
+    .rating>label {
+      width: auto;
+      float: right;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  
+    .rating:not(:checked)>label:hover:before,
+    .rating:not(:checked)>label:hover~label:before,
+    .rating>input:checked+label:hover:before,
+    .rating>input:checked~label:before,
+    .rating>input:checked~label:hover:before,
+    .rating>input:checked~label:hover~label:before,
+    .rating>label:hover~input:checked~label:before {
+      // star-full
+      -webkit-mask: url("../images/icons/star-fill.svg");
+      mask: url("../images/icons/star-fill.svg");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+  
+    .rating>input:checked~label:before {
+      // star-full
+      -webkit-mask: url("../images/icons/star-fill.svg");
+      mask: url("../images/icons/star-fill.svg");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+}
+
+.reviews-content {
+  padding-top: 57px;
+  padding-bottom: 40px;
+  background-color: $grey;
+  margin-bottom: 70px;
+
+  & .reviews-item {
+    min-height: 382px;
+    height: 100%;
+  }
+
+  & .reviews-item__wrapper {
+    & .reviews-item__more {
+      display: none;
+    }
+  }
+
+  & .reviews-item__wrapper.hide-text {
+    & .reviews-item__more {
+      display: block;
+    }
+  }
+}
+
+ .reviews-item {
+  min-height: 382px;
+  height: 100%;
+}
+
+ .reviews-item__wrapper {
+  & .reviews-item__more {
+    display: none;
+  }
+}
+
+ .reviews-item__wrapper.hide-text {
+  & .reviews-item__more {
+    display: block;
+  }
+}
+
+.reviews-item__more {
+display: flex;
+align-items: center;
+width: fit-content;
+padding-right: 15px;
+ cursor: pointer;
+&:hover {
+  & > div {
+    background-color: rgba($blue, 0.5);
+  }
+}
+& > div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $blue;
+  transition: background-color linear 0.2s;
+ 
+}
+}
+
+.reviews-content__items.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  & > div {
+    margin-bottom: 30px;
+  }
+}
+
+

@@ -1,0 +1,125 @@
+.section-contacts {
+  margin-bottom: 80px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.section-contacts__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 70px;
+  min-height: 434px;
+
+  @media (max-width: 991px) {
+    display: block;
+    padding: 0;
+  }
+}
+
+.section-contacts__text {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  width: fit-content;
+  min-width: 329px;
+  padding: 24px 31px 21px 31px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  @media (max-width: 767px) {
+    min-width: 100%;
+  }
+
+  & .contacts {
+    &__title {
+      display: block;
+      margin-top: 17px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: $blue;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &__text {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: $text;
+
+      &:last-of-type {
+        margin-top: 3px;
+      }
+
+      & span {
+        display: block;
+      }
+
+      & a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: $text;
+      }
+    }
+
+    &__messengers {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 10px;
+
+      & li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        & a:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+  }
+}
+
+.section-contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @media (max-width: 991px) {
+    position: static;
+    height: 400px;
+  }
+
+  @media (max-width: 767px) {
+    height: 60vw;
+  }
+
+  @media (max-width: 574px) {
+    height: 80vw;
+  }
+}

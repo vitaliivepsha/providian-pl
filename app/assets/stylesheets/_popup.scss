@@ -1,0 +1,271 @@
+.mfp-bg{
+  background: $text;
+  opacity: 0.6;
+}
+
+.popup{
+  position: relative;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
+  .mfp-close{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 0;
+    right: -40px;
+    font-size: 0;
+    opacity: 1;
+    @include bp(md){
+      box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
+      top: 10px;
+      right: 15px;
+    }
+    &:hover{
+      &:before, &:after{
+        background-color: $red;
+      }
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 1px;
+      background-color: $blue;
+      transform: rotate(-45deg);
+      top: 9px;
+      left: 4px;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 1px;
+      background-color: $blue;
+      transform: rotate(45deg);
+      top: 9px;
+      left: 4px;
+    }
+  }
+}
+
+.photo-popup{
+  width: 850px;
+  max-width: 100%;
+  padding: 25px 55px 20px;
+  @include bp(md){
+    width: 100vw;
+    max-width: 100vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include bp(sm){
+    padding: 25px 20px;
+  }
+  @include bp(xs){
+    padding: 20px 15px;
+  }
+}
+
+.photo-popup__counter{
+  font-style: italic;
+  font-size: 12px;
+  line-height: 130%;
+  color: $blue;
+  margin-bottom: 5px;
+  @include bp(xs){
+    font-size: 10px;
+  }
+}
+
+.photo-popup__title{
+  font-family: $default;
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 14px;
+  @include bp(xs){
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.photo-slider{
+  border-radius: 5px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: $grey;
+  margin-bottom: 10px;
+  @include bp(sm){
+    height: 76vw;
+  }
+  .slick-arrow{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    background-color: transparent;
+    @include bp(sm){
+      display: none;
+      opacity: 0;
+    }
+    &:hover{
+      svg{
+        >*{
+          fill: $blue;
+        }
+      }
+    }
+    &.slick-prev{
+      left: 20px;
+    }
+    &.slick-next{
+      right: 20px;
+    }
+    &.slick-disabled{
+      opacity: .5;
+      pointer-events: none;
+    }
+    svg{
+      >*{
+        transition: linear .2s;
+      }
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    bottom: 20px;
+    padding: 0 20px;
+    @include bp(sm){
+      bottom: 10px;
+      padding: 0 10px;
+    }
+    li{
+      margin: 3.5px;
+      opacity: .5;
+      display: flex;
+      @include bp(sm){
+        margin: 2.5px;
+      }
+      &.slick-active{
+        opacity: 1;
+        button{
+          width: 20px;
+          height: 20px;
+          @include bp(sm){
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+      button{
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        transition: linear .2s;
+        @include bp(sm){
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+  }
+  .slick-list, .slick-track{
+    height: 100%;
+  }
+  .slick-slide{
+    height: 100%;
+    >div{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .slide{
+    width: 100%;
+    height: 100%;
+    picture{
+      display: block;
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.photo-popup__descr{
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 15px;
+  @include bp(xs){
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  >*{
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.photo-popup__footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-gallery__btn{
+  width: 100px;
+  height: 45px;
+  background: $blue;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid $blue;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: $default;
+  @include bp(xs){
+    height: 40px;
+    font-size: 12px;
+  }
+  &:hover{
+    background-color: $red;
+    border-color: $red;
+  }
+  &.slick-disabled{
+    background-color: #fff;
+    color: $blue;
+    cursor: default;
+    pointer-events: none;
+  }
+}

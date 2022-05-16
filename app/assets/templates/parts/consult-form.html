@@ -1,0 +1,33 @@
+<div class="section section-consult">
+  <div class="container">
+    <div class="section-consult__wrapper">
+      <span class="section-consult__title">С удовольствием проконсультируем Вас!</span>
+      <span class="section-consult__suptitle">Если Вам нужно подобрать медицинское оборудование или нужен ремонт,
+        обращайтесь к нам и мы поможем</span>
+      <form class="section-consult__form ajax_form clear-styles" data-error-title="Ошибка отправки!"
+        data-error-message="Попробуйте отправить заявку через некоторое время." data-success-title="Спасибо за заявку!"
+        data-success-message="Наш менеджер свяжется с вами в ближайшее время.">
+        <div class="section-consult__form-wrapper">
+          <div class="section-consult__form-inner">
+            <div class="input-wrapper">
+              <input class="input" type="text" name="phone" data-title="Телефон"
+                data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер"
+                placeholder="Телефон">
+            </div>
+            <div class="input-wrapper">
+              <input class="input" type="text" name="email" data-title="Email"
+                data-validate-required="Обязательное поле" placeholder="Email">
+            </div>
+          </div>
+          <div class="section-consult__form-inner">
+            <div class="input-wrapper">
+              <textarea class="textarea" name="message" data-title="Сообщение"
+                data-validate-required="Обязательное поле" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+        </div>
+        <button class="btn" type="submit">Получить консультацию</button>
+      </form>
+    </div>
+  </div>
+</div>

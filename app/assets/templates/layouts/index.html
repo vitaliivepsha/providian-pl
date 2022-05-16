@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Providian</title>
+  <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
+  <meta name="theme-color" content="#0B4899">
+  <meta name="msapplication-navbutton-color" content="#0B4899">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0B4899">
+</head>
+
+<body id="main">
+  ${require('../parts/header.html')}
+  <div class="header-spacer"></div>
+  <main class="main">
+    <div class="section section-main">
+      <picture>
+        <source srcset="../../images/pixel.webp" data-original="../../images/bg-main.webp" class="lazy-web"
+          type="image/webp">
+        <source srcset="../../images/pixel.jpg" data-original="../../images/bg-main.jpg" class="lazy-web"
+          type="image/jpg">
+        <img src="../../images/pixel.jpg" data-original="../../images/bg-main.jpg" class="lazy" alt="">
+      </picture>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
+            <div class="main-text">
+              <h1 class="main-text__title">
+                ПРОДАЖА И РЕМОНТ МЕДИЦИНСКОГО ОБОРУДОВАНИЯ PROVIDIAN MEDICAL
+              </h1>
+              <p class="main-text__suptitle">Мы предлагаем практически все для медицины:<br>
+                от узи-аппарата до наркозо-дыхательного оборудования</p>
+              <a href="javascript:void(0)" class="main-text__link btn btn-b">Подробнее</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
+            <div class="main-form">
+              <span class="main-form__top-text">Если Вам нужно подобрать медицинское оборудование оставляйте заявку<br>
+                и мы поможем</span>
+              <form class="main-form__form ajax_form clear-styles" data-error-title="Ошибка отправки!"
+                data-error-message="Попробуйте отправить заявку через некоторое время."
+                data-success-title="Спасибо за заявку!"
+                data-success-message="Наш менеджер свяжется с вами в ближайшее время.">
+
+                <div class="input-wrapper">
+                  <input class="input" type="text" name="phone" data-title="Телефон"
+                    data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер"
+                    placeholder="Телефон">
+                </div>
+                <div class="input-wrapper">
+                  <input class="input" type="text" name="email" data-title="Email"
+                    data-validate-required="Обязательное поле" placeholder="Email">
+                </div>
+
+                <div class="input-wrapper">
+                  <textarea class="textarea" name="message" data-title="Сообщение"
+                    data-validate-required="Обязательное поле" placeholder="Сообщение"></textarea>
+                </div>
+                <button class="btn btn-tr" type="submit">Связаться</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-descr">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
+            <div class="section-descr__img">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/main-desc.webp" class="lazy-web"
+                  type="image/webp">
+                <source srcset="../../images/pixel.png" data-original="../../images/main-desc.png" class="lazy-web"
+                  type="image/png">
+                <img src="../../images/pixel.png" data-original="../../images/main-desc.png" class="lazy" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
+            <div class="section-descr__inner">
+              <div class="section-descr__inner-text">
+                <span>широкий ассортимент медицинского оборудования ведущих мировых производителей</span>
+                <p>Група компаний «Провидин Медикал» специализируется<br>
+                  на поставке и обслуживании медицинского оборудования ведущих мировых<br>
+                  производителей – лидеров отрасли, производственные мощности которых расположены в<br>
+                  Германии, Северной Америке, Японии, Великобритании</p>
+              </div>
+              <i class="round-icon">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.00063 8.28166e-05C4.13324 8.28109e-05 4.26042 0.0527609 4.35419 0.146529C4.44795 0.240297 4.50063 0.367474 4.50063 0.500083L4.50063 6.29308L6.64663 4.14608C6.69312 4.09959 6.74831 4.06272 6.80905 4.03756C6.86979 4.0124 6.93489 3.99945 7.00063 3.99945C7.06638 3.99945 7.13148 4.0124 7.19222 4.03756C7.25295 4.06272 7.30814 4.09959 7.35463 4.14608C7.40112 4.19257 7.438 4.24776 7.46316 4.3085C7.48831 4.36924 7.50126 4.43434 7.50126 4.50008C7.50126 4.56583 7.48831 4.63093 7.46316 4.69167C7.438 4.75241 7.40112 4.80759 7.35463 4.85408L4.35463 7.85408C4.30819 7.90065 4.25301 7.93759 4.19227 7.9628C4.13152 7.988 4.0664 8.00098 4.00063 8.00098C3.93486 8.00098 3.86974 7.988 3.809 7.9628C3.74825 7.93759 3.69308 7.90065 3.64663 7.85408L0.646632 4.85408C0.552745 4.7602 0.5 4.63286 0.5 4.50008C0.5 4.36731 0.552745 4.23997 0.646632 4.14608C0.740518 4.0522 0.867856 3.99945 1.00063 3.99945C1.13341 3.99945 1.26075 4.0522 1.35463 4.14608L3.50063 6.29308L3.50063 0.500083C3.50063 0.367474 3.55331 0.240297 3.64708 0.146529C3.74085 0.0527609 3.86802 8.28224e-05 4.00063 8.28166e-05Z"
+                    fill="white" />
+                </svg>
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="section section-equipment">
+      <div class="section-head">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+              <div class="section-head__inner">
+                <span class="section-head__title">Каталог медицинского оборудования</span>
+                <a href="javascript:void(0)" class="section-equipment__link head-link">
+                  В каталог
+                  <i class="round-icon">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M-0.000893899 3.99986C-0.00089391 3.86725 0.0517842 3.74007 0.145552 3.6463C0.23932 3.55254 0.366498 3.49986 0.499106 3.49986L6.29211 3.49986L4.14511 1.35386C4.09862 1.30737 4.06174 1.25218 4.03658 1.19144C4.01142 1.1307 3.99847 1.0656 3.99847 0.999857C3.99847 0.934113 4.01142 0.869013 4.03658 0.808273C4.06174 0.747534 4.09862 0.692345 4.14511 0.645857C4.19159 0.599369 4.24678 0.562492 4.30752 0.537333C4.36826 0.512174 4.43336 0.499225 4.49911 0.499225C4.56485 0.499225 4.62995 0.512174 4.69069 0.537333C4.75143 0.562492 4.80662 0.599369 4.85311 0.645857L7.85311 3.64586C7.89967 3.6923 7.93661 3.74748 7.96182 3.80822C7.98703 3.86897 8 3.93409 8 3.99986C8 4.06562 7.98703 4.13074 7.96182 4.19149C7.93661 4.25224 7.89967 4.30741 7.85311 4.35386L4.85311 7.35386C4.75922 7.44774 4.63188 7.50049 4.49911 7.50049C4.36633 7.50049 4.23899 7.44774 4.14511 7.35386C4.05122 7.25997 3.99848 7.13263 3.99848 6.99986C3.99848 6.86708 4.05122 6.73974 4.14511 6.64586L6.29211 4.49986L0.499106 4.49986C0.366498 4.49986 0.23932 4.44718 0.145552 4.35341C0.0517842 4.25964 -0.000893887 4.13247 -0.000893899 3.99986Z"
+                        fill="white" />
+                    </svg>
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-equipment__catalog">
+        <div class="container">
+          <ul class="row">
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-01.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-01.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-01.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Эндоскопия</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-02.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-02.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-02.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Электрохирургия</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-03.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-03.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-03.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Узи диагностика</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-04.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-04.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-04.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Операционная</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-05.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-05.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-05.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Анестезиология. Реанимация. Интенсивная терапия</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-06.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-06.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-06.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Химиотерапия</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-07.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-07.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-07.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Стерилизаторы (автоклавы)</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-08.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-08.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-08.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Кардиология и кардиохирургия</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-09.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-09.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-09.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Ортопедия</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-10.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-10.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-10.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Урология</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-11.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-11.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-11.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">ЛОР</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-12.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-12.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-12.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Проктология</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-13.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-13.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-13.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Пластическая хирургия</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-14.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-14.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-14.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Дерматология</div>
+              </a>
+            </li>
+            <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+              <a href="javascript:void(0)" class="equipment-item">
+                <div class="equipment-item__pic">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/equipment-item-15.webp"
+                      class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/equipment-item-15.jpg"
+                      class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/equipment-item-15.jpg" class="lazy"
+                      alt="">
+                  </picture>
+                </div>
+                <div class="equipment-item__title">Прайс медицинского оборудования / услуг</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section section-brands">
+      <div class="container">
+        <div class="section-brands__wrapper">
+          <div class="section-brands__about">
+            <span class="section-brands__title">Производители оборудования</span>
+            <p class="section-brands__text">
+              <span>Можете подобрать оборудование по производителю</span>
+              <i class="round-icon">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M-0.000893899 3.99986C-0.00089391 3.86725 0.0517842 3.74007 0.145552 3.6463C0.23932 3.55254 0.366498 3.49986 0.499106 3.49986L6.29211 3.49986L4.14511 1.35386C4.09862 1.30737 4.06174 1.25218 4.03658 1.19144C4.01142 1.1307 3.99847 1.0656 3.99847 0.999857C3.99847 0.934113 4.01142 0.869013 4.03658 0.808273C4.06174 0.747534 4.09862 0.692345 4.14511 0.645857C4.19159 0.599369 4.24678 0.562492 4.30752 0.537333C4.36826 0.512174 4.43336 0.499225 4.49911 0.499225C4.56485 0.499225 4.62995 0.512174 4.69069 0.537333C4.75143 0.562492 4.80662 0.599369 4.85311 0.645857L7.85311 3.64586C7.89967 3.6923 7.93661 3.74748 7.96182 3.80822C7.98703 3.86897 8 3.93409 8 3.99986C8 4.06562 7.98703 4.13074 7.96182 4.19149C7.93661 4.25224 7.89967 4.30741 7.85311 4.35386L4.85311 7.35386C4.75922 7.44774 4.63188 7.50049 4.49911 7.50049C4.36633 7.50049 4.23899 7.44774 4.14511 7.35386C4.05122 7.25997 3.99848 7.13263 3.99848 6.99986C3.99848 6.86708 4.05122 6.73974 4.14511 6.64586L6.29211 4.49986L0.499106 4.49986C0.366498 4.49986 0.23932 4.44718 0.145552 4.35341C0.0517842 4.25964 -0.000893887 4.13247 -0.000893899 3.99986Z"
+                    fill="white" />
+                </svg>
+              </i>
+            </p>
+          </div>
+          <ul class="section-brands__list">
+            <li><a href="javascript:void(0)">Conmed</a></li>
+            <li><a href="javascript:void(0)">NDS</a></li>
+            <li><a href="javascript:void(0)">ERBE Elektromedizin</a></li>
+            <li><a href="javascript:void(0)">Acuson</a></li>
+            <li><a href="javascript:void(0)">Schmitz</a></li>
+            <li><a href="javascript:void(0)">Olympus</a></li>
+            <li><a href="javascript:void(0)">Siemens</a></li>
+            <li><a href="javascript:void(0)">Richard Wolf</a></li>
+            <li><a href="javascript:void(0)">Sonosite</a></li>
+            <li><a href="javascript:void(0)">Fisher & Paykel</a></li>
+            <li><a href="javascript:void(0)">Ellman</a></li>
+            <li><a href="javascript:void(0)">Toshiba</a></li>
+            <li><a href="javascript:void(0)">Ethicon</a></li>
+            <li><a href="javascript:void(0)">Erba</a></li>
+            <li><a href="javascript:void(0)">Storz</a></li>
+            <li><a href="javascript:void(0)">Karl Storz</a></li>
+            <li><a href="javascript:void(0)">B. Braun</a></li>
+            <li><a href="javascript:void(0)">Zoll</a></li>
+            <li><a href="javascript:void(0)">Berchtold</a></li>
+            <li><a href="javascript:void(0)">SciCan</a></li>
+            <li><a href="javascript:void(0)">General Electric</a></li>
+            <li><a href="javascript:void(0)">Stryker</a></li>
+            <li><a href="javascript:void(0)">Smith & Nephew</a></li>
+            <li><a href="javascript:void(0)">Samsung</a></li>
+            <li><a href="javascript:void(0)">Philips</a></li>
+            <li><a href="javascript:void(0)">Dräger Medical</a></li>
+            <li><a href="javascript:void(0)">Medtronic</a></li>
+            <li><a href="javascript:void(0)">3М</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section section-blog">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__inner">
+            <span class="section-head__title">Блог</span>
+            <a href="javascript:void(0)" class="section-equipment__link head-link">
+              Перейти в блог
+              <i class="round-icon">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M-0.000893899 3.99986C-0.00089391 3.86725 0.0517842 3.74007 0.145552 3.6463C0.23932 3.55254 0.366498 3.49986 0.499106 3.49986L6.29211 3.49986L4.14511 1.35386C4.09862 1.30737 4.06174 1.25218 4.03658 1.19144C4.01142 1.1307 3.99847 1.0656 3.99847 0.999857C3.99847 0.934113 4.01142 0.869013 4.03658 0.808273C4.06174 0.747534 4.09862 0.692345 4.14511 0.645857C4.19159 0.599369 4.24678 0.562492 4.30752 0.537333C4.36826 0.512174 4.43336 0.499225 4.49911 0.499225C4.56485 0.499225 4.62995 0.512174 4.69069 0.537333C4.75143 0.562492 4.80662 0.599369 4.85311 0.645857L7.85311 3.64586C7.89967 3.6923 7.93661 3.74748 7.96182 3.80822C7.98703 3.86897 8 3.93409 8 3.99986C8 4.06562 7.98703 4.13074 7.96182 4.19149C7.93661 4.25224 7.89967 4.30741 7.85311 4.35386L4.85311 7.35386C4.75922 7.44774 4.63188 7.50049 4.49911 7.50049C4.36633 7.50049 4.23899 7.44774 4.14511 7.35386C4.05122 7.25997 3.99848 7.13263 3.99848 6.99986C3.99848 6.86708 4.05122 6.73974 4.14511 6.64586L6.29211 4.49986L0.499106 4.49986C0.366498 4.49986 0.23932 4.44718 0.145552 4.35341C0.0517842 4.25964 -0.000893887 4.13247 -0.000893899 3.99986Z"
+                    fill="white" />
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+        <div class="blog-items row">
+          <div class="col-lg-3 col-sm-6 col-xs-6">
+            <a href="javascript:void(0)" class="blog-item">
+              <div class="blog-item__pic">
+                <picture>
+                  <source srcset="../../images/pixel.webp" data-original="../../images/blog-item-01.webp"
+                    class="lazy-web" type="image/webp">
+                  <source srcset="../../images/pixel.jpg" data-original="../../images/blog-item-01.jpg" class="lazy-web"
+                    type="image/jpg">
+                  <img src="../../images/pixel.jpg" data-original="../../images/blog-item-01.jpg" class="lazy" alt="">
+                </picture>
+              </div>
+              <div class="blog-item__text">
+                <span class="blog-item__text-title">Ортопедия</span>
+                <p class="blog-item__text-desc">Rurus sit Lorem ipsum dolor sit amet, consectetur</p>
+                <div class="blog-item__text-bot">
+                  <span class="blog-item__date">31/01/2020</span>
+                  <i class="round-icon">+</i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-6">
+            <a href="javascript:void(0)" class="blog-item">
+              <div class="blog-item__pic">
+                <picture>
+                  <source srcset="../../images/pixel.webp" data-original="../../images/blog-item-02.webp"
+                    class="lazy-web" type="image/webp">
+                  <source srcset="../../images/pixel.jpg" data-original="../../images/blog-item-02.jpg" class="lazy-web"
+                    type="image/jpg">
+                  <img src="../../images/pixel.jpg" data-original="../../images/blog-item-02.jpg" class="lazy" alt="">
+                </picture>
+              </div>
+              <div class="blog-item__text">
+                <span class="blog-item__text-title">Эдоскоппия</span>
+                <p class="blog-item__text-desc">Rurus sit Lorem ipsum dolor sit amet, consectetur</p>
+                <div class="blog-item__text-bot">
+                  <span class="blog-item__date">31/01/2020</span>
+                  <i class="round-icon">+</i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-6">
+            <a href="javascript:void(0)" class="blog-item">
+              <div class="blog-item__pic">
+                <picture>
+                  <source srcset="../../images/pixel.webp" data-original="../../images/blog-item-01.webp"
+                    class="lazy-web" type="image/webp">
+                  <source srcset="../../images/pixel.jpg" data-original="../../images/blog-item-01.jpg" class="lazy-web"
+                    type="image/jpg">
+                  <img src="../../images/pixel.jpg" data-original="../../images/blog-item-01.jpg" class="lazy" alt="">
+                </picture>
+              </div>
+              <div class="blog-item__text">
+                <span class="blog-item__text-title">Электрохирургия</span>
+                <p class="blog-item__text-desc">Rurus sit Lorem ipsum dolor sit amet, consectetur</p>
+                <div class="blog-item__text-bot">
+                  <span class="blog-item__date">31/01/2020</span>
+                  <i class="round-icon">+</i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-6">
+            <a href="javascript:void(0)" class="blog-item">
+              <div class="blog-item__pic">
+                <picture>
+                  <source srcset="../../images/pixel.webp" data-original="../../images/blog-item-02.webp"
+                    class="lazy-web" type="image/webp">
+                  <source srcset="../../images/pixel.jpg" data-original="../../images/blog-item-02.jpg" class="lazy-web"
+                    type="image/jpg">
+                  <img src="../../images/pixel.jpg" data-original="../../images/blog-item-02.jpg" class="lazy" alt="">
+                </picture>
+              </div>
+              <div class="blog-item__text">
+                <span class="blog-item__text-title">Реанимация</span>
+                <p class="blog-item__text-desc">Rurus sit Lorem ipsum dolor sit amet, consectetur</p>
+                <div class="blog-item__text-bot">
+                  <span class="blog-item__date">31/01/2020</span>
+                  <i class="round-icon">+</i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-main-consult">
+      <div class="container">
+        <div class="section-main-consult__wrapper">
+          <span class="section-main-consult__title">услуги по ремонту и обслуживанию медицинского оборудования</span>
+          <span class="section-main-consult__suptitle">Если Вам нужно подобрать медицинское оборудование или нужен
+            ремонт,
+            оставляйте заявку и мы поможем</span>
+          <form class="section-main-consult__form ajax_form clear-styles" data-error-title="Ошибка отправки!"
+            data-error-message="Попробуйте отправить заявку через некоторое время."
+            data-success-title="Спасибо за заявку!"
+            data-success-message="Наш менеджер свяжется с вами в ближайшее время.">
+            <div class="section-main-consult__form-wrapper">
+              <div class="section-main-consult__form-inner">
+                <div class="input-wrapper">
+                  <input class="input" type="text" name="phone" data-title="Телефон"
+                    data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер"
+                    placeholder="Телефон">
+                </div>
+                <div class="input-wrapper">
+                  <input class="input" type="text" name="email" data-title="Email"
+                    data-validate-required="Обязательное поле" placeholder="Email">
+                </div>
+              </div>
+              <div class="section-main-consult__form-inner">
+                <div class="input-wrapper">
+                  <textarea class="textarea" name="message" data-title="Сообщение"
+                    data-validate-required="Обязательное поле" placeholder="Сообщение"></textarea>
+                </div>
+              </div>
+            </div>
+            <button class="btn" type="submit">Оставить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="section section-reviews">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__inner">
+            <span class="section-head__title">Отзывы</span>
+            <a href="javascript:void(0)" class="section-equipment__link head-link">
+              Перейти к отзывам
+              <i class="round-icon">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M-0.000893899 3.99986C-0.00089391 3.86725 0.0517842 3.74007 0.145552 3.6463C0.23932 3.55254 0.366498 3.49986 0.499106 3.49986L6.29211 3.49986L4.14511 1.35386C4.09862 1.30737 4.06174 1.25218 4.03658 1.19144C4.01142 1.1307 3.99847 1.0656 3.99847 0.999857C3.99847 0.934113 4.01142 0.869013 4.03658 0.808273C4.06174 0.747534 4.09862 0.692345 4.14511 0.645857C4.19159 0.599369 4.24678 0.562492 4.30752 0.537333C4.36826 0.512174 4.43336 0.499225 4.49911 0.499225C4.56485 0.499225 4.62995 0.512174 4.69069 0.537333C4.75143 0.562492 4.80662 0.599369 4.85311 0.645857L7.85311 3.64586C7.89967 3.6923 7.93661 3.74748 7.96182 3.80822C7.98703 3.86897 8 3.93409 8 3.99986C8 4.06562 7.98703 4.13074 7.96182 4.19149C7.93661 4.25224 7.89967 4.30741 7.85311 4.35386L4.85311 7.35386C4.75922 7.44774 4.63188 7.50049 4.49911 7.50049C4.36633 7.50049 4.23899 7.44774 4.14511 7.35386C4.05122 7.25997 3.99848 7.13263 3.99848 6.99986C3.99848 6.86708 4.05122 6.73974 4.14511 6.64586L6.29211 4.49986L0.499106 4.49986C0.366498 4.49986 0.23932 4.44718 0.145552 4.35341C0.0517842 4.25964 -0.000893887 4.13247 -0.000893899 3.99986Z"
+                    fill="white" />
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+        <div class="reviews-slider slick-slider"
+          data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": true, "dots": true, "infinite": true, "responsive":[{"breakpoint":1199,"settings":{"slidesToShow": 3, "slidesToScroll": 3}}, {"breakpoint":991,"settings":{"slidesToShow": 2, "slidesToScroll": 2}}, {"breakpoint":740,"settings":{"arrows": false, "slidesToShow": 1, "slidesToScroll": 1, "dots": true}}]}'>
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Криворучков Дмитрий</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat
+                diam, id aliquet
+                libero convallis nec.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Елена Виктор</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Lorem ipsumc.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Андрей</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+                Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit
+                volutpat.Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus
+                hendrerit
+                volutpat.
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Curabitur tincidunt erat diam, id aliquet libero convallis nec.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Криворучков Дмитрий</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+                Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit
+                volutpat. Class
+                aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Елена Виктор</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Lorem ipsumc.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Андрей</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+                Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit
+                volutpat.lla tellus. Praesent ac felis eu metus hendrerit
+                volutpat.
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Curabitur tincidunt erat diam, id aliquet libero convallis nec.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Криворучков Дмитрий</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+                Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit
+                volutpat. Class
+                aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Елена Виктор</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Lorem ipsumc.</p>
+            </div>
+          </div>
+
+          <div class="reviews-item">
+            <div class="reviews-item__wrapper">
+              <div class="reviews-item__head">
+                <span class="reviews-item__name">Андрей</span>
+                <div class="reviews-item__rating rating-stars">
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                  <span class="rating-star active"></span>
+                </div>
+              </div>
+              <p class="reviews-item__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
+                libero convallis nec.
+                Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit
+                volutpat.
+              </p>
+              <div class="reviews-item__more">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div><span class="reviews-item__date">31/01/2020</span>
+            <div class="reviews-item__reply">
+              <span>Providian Medical:</span>
+              <p>Curabitur tincidunt erat diam, id aliquet libero convallis nec.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section-about">
+      <div class="container">
+        <h1>О компании</h1>
+        <div class="section-about__images">
+          <div>
+            <picture>
+              <source srcset="../../images/pixel.webp" data-original="../../images/about-01.webp" class="lazy-web"
+                type="image/webp">
+              <source srcset="../../images/pixel.jpg" data-original="../../images/about-01.jpg" class="lazy-web"
+                type="image/jpg">
+              <img src="../../images/pixel.jpg" data-original="../../images/about-01.jpg" class="lazy" alt="">
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <source srcset="../../images/pixel.webp" data-original="../../images/about-02.webp" class="lazy-web"
+                type="image/webp">
+              <source srcset="../../images/pixel.jpg" data-original="../../images/about-02.jpg" class="lazy-web"
+                type="image/jpg">
+              <img src="../../images/pixel.jpg" data-original="../../images/about-02.jpg" class="lazy" alt="">
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <source srcset="../../images/pixel.webp" data-original="../../images/about-03.webp" class="lazy-web"
+                type="image/webp">
+              <source srcset="../../images/pixel.jpg" data-original="../../images/about-03.jpg" class="lazy-web"
+                type="image/jpg">
+              <img src="../../images/pixel.jpg" data-original="../../images/about-03.jpg" class="lazy" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="section-about__text">
+          <h2>Компания Провидиан Медикал - немного о нас</h2>
+          <p>В 2017 году мы сделали свои первые шаги на рынке медицинского оборудования бывшего в употреблении, изучили
+            этот
+            интересный сегмент, прислушались<br> к пожеланиям потенциальных клиентов и просто знакомых докторов,
+            поставили
+            цели, к
+            которым мы должны прийти и начали работать.<br>
+            Результат 40 месяцев непрерывной ответственной работы – Провидиан Медикал серьезный узнаваемый игрок рынка
+            медицинского
+            оборудования с ответственной<br> профессиональной командой.</p>
+          <h2>Каковы факторы успеха компании в сегменте рынка медицинского оборудования бывшего в употреблении?</h2>
+          <ul>
+            <li>
+              <b>Понимание требований и ожиданий рынка.</b>
+              <p>ПРОВИДИАН всегда рядом с интересными предложениями, медицинские специалисты разных областей находят для
+                себя много
+                нужного, интересного, а<br> иногда, и неожиданного на нашем складе</p>
+            </li>
+            <li>
+              <b>Фактическое наличие широкого ассортимента оборудования на складе:</b>
+              <p>Узи аппараты, эндоскопическое оборудование, операционные столы и лампы, электрохирургические
+                аппараты,
+                наркозо-дыхательное оборудование,<br> мониторы пациента и дефибрилляторы, инсуффляторы и помпы,
+                инструментарий.</p>
+            </li>
+          </ul>
+          <h2>Провидиану всегда есть чем порадовать и удивить</h2>
+          <ul>
+            <li>
+              <b>Тщательный подбор оборудования; оборудования, от которого «знаешь, чего ожидать».</b>
+              <p>Провидиан Медикал предлагает только проверенные временем, хорошо зарекомендовавшие себя бренды из США,
+                Германии, Японии:
+                в ультразвуковой<br> диагностике это Toshiba, GE, Siemens, Philips; в эндоскопии – Karl Storz, Stryker,
+                Smith&Nephew,
+                Conmed, R.Wolf, Olympus, Pentax, Fujinon; в электрохирургическом<br> оборудовании – Erbe, Ethicon,
+                Ellman,
+                Aesculap, Conmed,
+                в операционном оборудовании – Maquet, Trumpf, Schmitz; в оборудовании для реанимации – Datex-Ohmeda,<br>
+                Drager, GE, Philips
+                и т.д.</p>
+            </li>
+            <li>
+              <b>Сервисная поддержка.</b>
+              <p>Провидиан Медикал не декламирует, Провидиан Медикал предоставляет сервисное гарантийное и
+                постгарантийное
+                обслуживание
+                поставляемого оборудования.<br> Проверкой и подготовкой к поставке оборудования занимаются
+                профессиональные
+                штатные
+                инженеры, они же ответственны за гарантийное и постгарантийное<br> обслуживание. Наш клиент не
+                пострадает
+                даже
+                при худшем
+                (теоретически возможном) сценарии – ПРОВИДИАН готов предоставить подменный фонд на период<br> решения
+                технических вопросов.</p>
+            </li>
+            <li>
+              <b>Профессиональная ответственная надежная команда.</b>
+              <p>Провидиан Медикал – это целостный сбалансированный организм из десяти человек, преданных своему делу,
+                любящих и ценящих
+                свою работу, нацеленных на<br> результат.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-about__bot">
+          <b>Провидиан Медикал – успешная надежная<br> компания. Мы гордимся тем, что создали.</b>
+          <div>
+            <picture>
+              <source srcset="../../images/pixel.webp" data-original="../../images/about-pic.webp" class="lazy-web"
+                type="image/webp">
+              <source srcset="../../images/pixel.png" data-original="../../images/about-pic.png" class="lazy-web"
+                type="image/png">
+              <img src="../../images/pixel.png" data-original="../../images/about-pic.png" class="lazy" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    ${require('../parts/consult-form.html')}
+    <div class="section section-contacts">
+      <div class="container">
+        <div class="section-contacts__wrapper">
+          <div class="section-contacts__text contacts">
+            <span class="contacts__title">Время работы</span>
+            <p class="contacts__text">
+              <span>Пн-Сб 09:00 - 18:00, Вс - выходной</span>
+              <span>Заявки на сайте принимаются 24/7</span>
+            </p>
+            <span class="contacts__title">Мессенджеры</span>
+            <ul class="contacts__messengers">
+              <li>
+                <a href="javascript:void(0)">
+                  <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.2218 0.0978383L1.44681 5.79534C0.438474 6.20034 0.444308 6.76284 1.26181 7.01367L5.05514 8.197L13.8318 2.6595C14.2468 2.407 14.626 2.54284 14.3143 2.8195L7.20347 9.237H7.20181L7.20347 9.23784L6.94181 13.1478C7.32514 13.1478 7.49431 12.972 7.70931 12.7645L9.55181 10.9728L13.3843 13.8037C14.091 14.1928 14.5985 13.9928 14.7743 13.1495L17.2901 1.29284C17.5476 0.260338 16.896 -0.207162 16.2218 0.0978383Z"
+                      fill="#252525" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.6625 3.2643C12.9256 2.52063 12.0482 1.93104 11.0812 1.5299C10.1142 1.12875 9.07702 0.924074 8.03013 0.927784C3.64339 0.927784 0.0683074 4.50187 0.0642893 8.88961C0.0642893 10.2949 0.431944 11.6621 1.12607 12.8725L0 17.0001L4.223 15.8931C5.39126 16.5289 6.70008 16.8621 8.03013 16.8625H8.03415C12.4219 16.8625 15.996 13.2884 16 8.89664C16.001 7.84998 15.7949 6.81345 15.3935 5.8468C14.9922 4.88014 14.4035 4.00245 13.6615 3.2643H13.6625ZM8.03013 15.5144C6.84379 15.5148 5.67926 15.1956 4.65896 14.5903L4.41788 14.4456L1.91261 15.1026L2.58162 12.6586L2.42491 12.4064C1.76173 11.352 1.411 10.1312 1.41336 8.88559C1.41336 5.2432 4.38373 2.27183 8.03415 2.27183C8.9038 2.27027 9.76517 2.44087 10.5686 2.77378C11.372 3.1067 12.1016 3.59535 12.7152 4.21156C13.331 4.82537 13.8192 5.55503 14.1516 6.35845C14.484 7.16187 14.6541 8.02316 14.6519 8.89262C14.6479 12.5481 11.6775 15.5144 8.03013 15.5144ZM11.6615 10.5581C11.4636 10.4587 10.4862 9.97751 10.3024 9.9092C10.1195 9.8439 9.98593 9.80975 9.85535 10.0086C9.72174 10.2065 9.34003 10.6576 9.22551 10.7871C9.111 10.9207 8.99246 10.9358 8.79357 10.8374C8.59568 10.7369 7.95379 10.528 7.19437 9.84792C6.60171 9.32055 6.20492 8.66761 6.08639 8.46972C5.97187 8.27083 6.07534 8.16435 6.17478 8.0649C6.26218 7.9765 6.37267 7.83185 6.47212 7.71733C6.57257 7.60282 6.60572 7.51844 6.67102 7.38584C6.73631 7.25124 6.70517 7.13672 6.65595 7.03727C6.60572 6.93783 6.20894 5.95641 6.04118 5.56063C5.88046 5.16987 5.71672 5.22412 5.59417 5.21909C5.47966 5.21206 5.34606 5.21206 5.21245 5.21206C5.11156 5.21457 5.01228 5.2379 4.92084 5.2806C4.82939 5.3233 4.74776 5.38444 4.68106 5.46018C4.49824 5.65907 3.98694 6.14024 3.98694 7.12165C3.98694 8.10307 4.70015 9.04632 4.8006 9.17992C4.89904 9.31352 6.2009 11.3216 8.19889 12.1854C8.67102 12.3914 9.04269 12.5129 9.333 12.6053C9.81014 12.758 10.2411 12.7349 10.5846 12.6857C10.9663 12.6274 11.7609 12.2035 11.9287 11.7384C12.0934 11.2723 12.0934 10.8745 12.0432 10.7912C11.994 10.7068 11.8604 10.6576 11.6615 10.5581Z"
+                      fill="#252525" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.57889 0.002474C6.22604 0.0189448 3.3175 0.24316 1.6907 1.74838C0.480607 2.95765 0.0581025 4.74553 0.00858198 6.95633C-0.0325095 9.15917 -0.08203 13.296 3.87171 14.4224V16.138C3.87171 16.138 3.84695 16.8245 4.29684 16.9653C4.85105 17.1422 5.16661 16.6141 5.69343 16.0466L6.67593 14.9261C9.38112 15.1529 11.4531 14.6301 11.6917 14.5525C12.2407 14.3756 15.3325 13.9771 15.8377 9.83978C16.3561 5.56694 15.5854 2.87477 14.1941 1.65699H14.1857C13.7658 1.267 12.0784 0.0269145 8.30853 0.0131003C8.30853 0.0131003 8.02879 -0.00602705 7.57889 0.00194268V0.002474ZM7.62525 1.20378C8.0093 1.20112 8.24268 1.21759 8.24268 1.21759C11.4336 1.22609 12.9566 2.19468 13.3159 2.52091C14.4875 3.5336 15.0913 5.96065 14.6493 9.5279C14.2294 12.9868 11.7218 13.2057 11.2576 13.355C11.0601 13.4187 9.23519 13.8725 6.93618 13.7232C6.93618 13.7232 5.22404 15.807 4.68879 16.3436C4.60398 16.4377 4.50494 16.4653 4.44172 16.4515C4.35111 16.4292 4.32371 16.316 4.32898 16.1608L4.34531 13.3135C0.992143 12.3784 1.1897 8.84994 1.22552 7.00681C1.26661 5.16367 1.60957 3.6558 2.63053 2.63461C4.00499 1.38124 6.47469 1.21228 7.6242 1.20378H7.62525ZM7.87812 3.04638C7.85053 3.0461 7.82315 3.05133 7.79756 3.06177C7.77198 3.07221 7.7487 3.08766 7.72906 3.10722C7.70942 3.12678 7.69382 3.15006 7.68314 3.17573C7.67247 3.2014 7.66694 3.22895 7.66687 3.25678C7.66687 3.3758 7.76275 3.46984 7.87812 3.46984C8.40046 3.45982 8.9196 3.55419 9.40559 3.74752C9.89159 3.94084 10.3348 4.22929 10.7097 4.59623C11.4752 5.34591 11.8482 6.35329 11.8624 7.67042C11.8624 7.78678 11.9557 7.88348 12.0737 7.88348V7.87498C12.1293 7.87512 12.1827 7.85308 12.2223 7.81367C12.2618 7.77426 12.2844 7.72066 12.2849 7.66458C12.3105 7.04461 12.2108 6.42587 11.9919 5.84597C11.773 5.26607 11.4395 4.73711 11.0116 4.29125C10.1777 3.46931 9.12088 3.04585 7.87812 3.04585V3.04638ZM5.10129 3.5336C4.95217 3.51162 4.80009 3.54181 4.67036 3.61914H4.65929C4.35809 3.7972 4.08676 4.02226 3.85537 4.28594C3.66309 4.51016 3.55878 4.73703 3.53138 4.9554C3.51505 5.08557 3.52612 5.21574 3.56457 5.34007L3.57827 5.34857C3.79479 5.9904 4.07769 6.60779 4.42328 7.18905C4.86845 8.00566 5.4163 8.76088 6.05324 9.43598L6.07221 9.46361L6.10223 9.48592L6.1212 9.50824L6.14333 9.52737C6.81514 10.1716 7.56577 10.7267 8.37702 11.1792C9.30421 11.6882 9.86684 11.9289 10.2045 12.0288V12.0341C10.3036 12.0644 10.3937 12.0782 10.4843 12.0782C10.7721 12.0569 11.0445 11.9391 11.2582 11.7435C11.5184 11.5101 11.7391 11.2353 11.9114 10.93V10.9247C12.0731 10.6176 12.0183 10.327 11.785 10.1304C11.3176 9.71837 10.8122 9.3524 10.2757 9.03749C9.91636 8.84091 9.55128 8.95992 9.40325 9.15917L9.08769 9.56031C8.92595 9.75955 8.63199 9.73192 8.63199 9.73192L8.62356 9.73724C6.43149 9.17245 5.84673 6.93402 5.84673 6.93402C5.84673 6.93402 5.81934 6.62957 6.02216 6.47443L6.41727 6.15351C6.6064 5.99837 6.7381 5.6307 6.53528 5.26781C6.22519 4.72595 5.86312 4.2161 5.45425 3.74559C5.36487 3.63467 5.23947 3.5592 5.10024 3.53253L5.10129 3.5336ZM8.24268 4.1648C7.96294 4.1648 7.96294 4.59091 8.24531 4.59091C8.59316 4.59661 8.93648 4.67137 9.25566 4.81095C9.57484 4.95053 9.86362 5.15217 10.1055 5.40436C10.3261 5.64983 10.4957 5.93747 10.6041 6.25024C10.7125 6.563 10.7576 6.89453 10.7366 7.22518C10.7376 7.28113 10.7602 7.33449 10.7997 7.37381C10.8392 7.41314 10.8924 7.43531 10.9479 7.43558L10.9563 7.44674C11.0122 7.44632 11.0657 7.42374 11.1052 7.38387C11.1447 7.34401 11.1671 7.29006 11.1675 7.23368C11.1865 6.38942 10.9263 5.68117 10.4158 5.11373C9.90267 4.54628 9.18673 4.22803 8.27271 4.1648H8.24268ZM8.58879 5.31032C8.30063 5.30182 8.28956 5.73643 8.5751 5.74493C9.26944 5.78106 9.6066 6.13492 9.65085 6.86282C9.65181 6.91807 9.67418 6.97075 9.71317 7.00958C9.75216 7.0484 9.80468 7.07029 9.85947 7.07056H9.8679C9.89607 7.06935 9.92372 7.06248 9.94923 7.05037C9.97474 7.03826 9.9976 7.02114 10.0165 7.00002C10.0354 6.9789 10.0499 6.9542 10.0592 6.92736C10.0685 6.90052 10.0724 6.87208 10.0707 6.84369C10.0212 5.89476 9.50808 5.36026 8.59722 5.31085H8.58879V5.31032Z"
+                      fill="#252525" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.2598 9.30078C15.3399 8.86133 15.3828 8.41211 15.3828 7.96289C15.3828 6.9668 15.1875 6 14.8027 5.0918C14.4317 4.21289 13.8985 3.42383 13.2207 2.74609C12.5486 2.07231 11.752 1.53566 10.875 1.16602C9.96486 0.78125 9.00001 0.585937 8.00392 0.585937C7.53517 0.585937 7.06447 0.630859 6.60744 0.71875C5.97504 0.383639 5.2704 0.207981 4.5547 0.207031C3.38868 0.207031 2.29103 0.662109 1.46681 1.48633C1.0601 1.89095 0.737625 2.37219 0.51804 2.90221C0.298456 3.43223 0.186115 4.00052 0.187513 4.57422C0.187513 5.31641 0.378919 6.04688 0.736341 6.69141C0.664076 7.10938 0.625013 7.53711 0.625013 7.96289C0.625013 8.95899 0.820326 9.92578 1.20509 10.834C1.57618 11.7129 2.10743 12.502 2.78517 13.1797C3.4629 13.8574 4.25197 14.3887 5.13087 14.7598C6.04103 15.1445 7.00587 15.3398 8.00197 15.3398C8.43556 15.3398 8.86915 15.3008 9.29494 15.2246C9.94923 15.5938 10.6875 15.791 11.4434 15.791C12.6094 15.791 13.707 15.3379 14.5313 14.5117C15.3574 13.6875 15.8106 12.5898 15.8106 11.4238C15.8125 10.6816 15.6211 9.94922 15.2598 9.30078ZM13.5391 13.5195C12.9785 14.082 12.2383 14.3867 11.4453 14.3867C10.9356 14.3867 10.4336 14.2539 9.98829 14.002L9.54884 13.7539L9.05079 13.8418C8.70314 13.9043 8.35158 13.9355 8.00392 13.9355C7.19533 13.9355 6.41603 13.7773 5.67775 13.4648C4.96876 13.166 4.33009 12.7363 3.77931 12.1855C3.23409 11.6422 2.79961 10.9981 2.50001 10.2891C2.18751 9.55274 2.03126 8.77344 2.03126 7.96484C2.03126 7.625 2.06251 7.27734 2.12111 6.93359L2.20704 6.44336L1.96486 6.00781C1.72058 5.56946 1.59219 5.07604 1.59181 4.57422C1.59181 3.78125 1.89845 3.04102 2.459 2.48047C3.0215 1.91992 3.76173 1.61328 4.5547 1.61328C5.04107 1.6146 5.51977 1.7346 5.94923 1.96289L6.38673 2.19336L6.87111 2.09961C7.24025 2.0293 7.62111 1.99219 8.00392 1.99219C8.81251 1.99219 9.59181 2.15039 10.3281 2.46094C11.041 2.76172 11.6777 3.19141 12.2266 3.74023C12.7774 4.28906 13.207 4.92773 13.5078 5.63867C13.8203 6.375 13.9766 7.1543 13.9766 7.96289C13.9766 8.32227 13.9434 8.68555 13.877 9.04688L13.7852 9.54492L14.0313 9.98633C14.2774 10.4258 14.4063 10.9238 14.4063 11.4258C14.4063 12.2207 14.0996 12.959 13.5391 13.5195ZM9.39455 7.10547L7.66798 6.72266C7.01173 6.57227 6.25587 6.375 6.25587 5.75586C6.25587 5.13672 6.78517 4.70313 7.7422 4.70313C9.66994 4.70313 9.49415 6.02734 10.4512 6.02734C10.9551 6.02734 11.3965 5.73047 11.3965 5.22266C11.3965 4.03516 9.49415 3.14258 7.88087 3.14258C6.12892 3.14258 4.26369 3.88672 4.26369 5.86719C4.26369 6.82031 4.60353 7.83594 6.48244 8.30664L8.81447 8.88867C9.51955 9.0625 9.69728 9.45898 9.69728 9.81836C9.69728 10.4141 9.10548 10.9961 8.03322 10.9961C5.93947 10.9961 6.23048 9.38477 5.10939 9.38477C4.60548 9.38477 4.24025 9.73242 4.24025 10.2266C4.24025 11.1914 5.41212 12.4805 8.03322 12.4805C10.5274 12.4805 11.7637 11.2793 11.7637 9.66797C11.7637 8.63086 11.2852 7.52734 9.39455 7.10547Z"
+                      fill="#252525" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <span class="contacts__title">Контакты</span>
+            <p class="contacts__text">
+              <span>Украина, Киев, ул.<br> Машиностроительная, 42, офис 201</span>
+            </p>
+            <p class="contacts__text">
+              Email: <a href="mailto:info@providian.com.ua">info@providian.com.ua</a>
+            </p>
+          </div>
+          <div class="section-contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6042.356256039962!2d30.4245816304492!3d50.450453197233934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc3e8a4a713d%3A0x339717fb2d752ba2!2z0YPQuy4g0JzQsNGI0LjQvdC-0YHRgtGA0L7QuNGC0LXQu9GM0L3QsNGPLCA0Miwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1652013011354!5m2!1sru!2sua"
+              style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  ${require('../parts/footer.html')}
+  <div class="mfp-hide">
+
+  </div>
+
+</body>
+
+</html>
