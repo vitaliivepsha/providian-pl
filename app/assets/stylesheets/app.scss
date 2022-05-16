@@ -25,11 +25,10 @@ body{
         visibility: visible;
         opacity: 1;
         z-index: 997;
-        opacity: 1;
       }
       & .header-bottom {
         transition: opacity linear 0.2s, visibility linear 0.2s;
-        background: rgba(56, 56, 56, 0.2);
+        background: #d7d7d7;
       }
     }
   // &.open-menu{
@@ -328,4 +327,5 @@ height: 0;
 @import 'reviews';
 @import 'delivery-payment';
 @import 'warranty';
+@import 'product';
 

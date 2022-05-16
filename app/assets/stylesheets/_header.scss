@@ -82,6 +82,11 @@
     }
     
   }
+  &.active{
+    .header-search {
+      width: 315px;
+    }
+  }
 }
 // header-search ---
 .highlighting-results mark{
@@ -149,52 +154,52 @@
   padding-top: 18px;
   padding-bottom: 10px;
   background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(54, 164, 238, 0.2);
-    border-radius: 5px;
-    width: 100%;
-& > ul {
-  max-height: 250px;
-  padding-left: 14px;
-  padding-right: 12px;
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-      overflow-y: scroll;
-      background: transparent;
-      width: 3px;
-      transition: linear .2s;
-      box-shadow: 1px 0 0 transparent;
-  
-    }
-  
-    &::-webkit-scrollbar-thumb {
-      background: $blue-mid;
-      border-radius: 0;
-      width: 1px;
-      transition: linear .2s;
-      cursor: grab;
-    }
-  & li {
-    display: none;
-    margin-bottom: 10px;
-    &.show {
+  box-shadow: 0px 0px 20px rgba(54, 164, 238, 0.2);
+  border-radius: 5px;
+  width: 100%;
+  & > ul {
+    max-height: 250px;
+    padding-left: 14px;
+    padding-right: 12px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        overflow-y: scroll;
+        background: transparent;
+        width: 3px;
+        transition: linear .2s;
+        box-shadow: 1px 0 0 transparent;
 
-    }
-    &:last-child {
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $blue-mid;
+        border-radius: 0;
+        width: 1px;
+        transition: linear .2s;
+        cursor: grab;
+      }
+    & li {
       display: none;
+      margin-bottom: 10px;
+      &.show {
+
+      }
+      &:last-child {
+        display: none;
+      }
     }
   }
-}
-& > div {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 10px;
-
-  & a {
+  & > div {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    font-size: 10px;
+    padding: 0 10px;
+
+    & > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
       line-height: 14px;
       color: rgba($text, 0.5);
       text-decoration: none;
@@ -204,13 +209,25 @@
           background-color: $blue;
         }
       }
-    & i {
-      margin-left: 12px;
-      background-color: $blue-mid;
-      transition: background-color linear 0.2s;
+      & i {
+        margin-left: 12px;
+        background-color: $blue-mid;
+        transition: background-color linear 0.2s;
+      }
+    }
+    >span{
+      display: none;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      text-transform: uppercase;
+      color: $text;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 8px;
     }
   }
-}
 }
 
 .search-results-item {
