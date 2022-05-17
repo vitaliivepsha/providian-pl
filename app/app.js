@@ -124,7 +124,7 @@ $(function () {
         }
     });
 
-    $('.reviews-item__more').click(function () {
+    $(document).delegate('.reviews-item__more', 'click', function() {
         $(this).hide().closest('.reviews-item__wrapper').find('.reviews-item__text').css({
             'height': 'auto', 'max-height': 'unset', 'overflow': 'auto',
             '-webkit-line-clamp': '100'
@@ -351,6 +351,66 @@ $(function () {
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
         $(window).trigger('resize');
         $('.slick-slider').slick('setPosition');
+    });
+
+    // counter slider
+
+    $('.counter-slider').each(function() {
+        var $slider = $(this);
+
+        $slider.closest('.counter-slider__wrapper').find('.slider-next').click(function() {
+            $slider.slick('slickNext');
+        });
+
+        $slider.closest('.counter-slider__wrapper').find('.slider-prev').click(function() {
+            $slider.slick('slickPrev');
+        });
+        if ($slider.find('.slick-prev').hasClass('slick-disabled')) {
+            $slider.closest('.counter-slider__wrapper').find('.slider-prev').addClass('slick-disabled');
+        }
+        else {
+            $slider.closest('.counter-slider__wrapper').find('.slider-prev').removeClass('slick-disabled');
+        }
+
+        if ($slider.find('.slick-next').hasClass('slick-disabled')) {
+            $slider.closest('.counter-slider__wrapper').find('.slider-next').addClass('slick-disabled');
+        }
+        else {
+            $slider.closest('.counter-slider__wrapper').find('.slider-next').removeClass('slick-disabled');
+        }
+
+        var currentSlide;
+        var slidesCount;
+        var sliderCounter = $slider.closest('.counter-slider__wrapper').find('.slider-counter');
+        $(sliderCounter).text('1' + ' / ' + $slider.slick('getSlick').slideCount);
+
+        var updateSliderCounter = function(slick, currentIndex) {
+            currentSlide = slick.slickCurrentSlide() + 1;
+            slidesCount = $slider.slick('getSlick').slideCount;
+            $(sliderCounter).text(currentSlide + ' / ' + slidesCount);
+        };
+
+        $slider.on('init', function(event, slick, slidesCount) {
+            updateSliderCounter(slick, slidesCount);
+        });
+
+        $slider.on('afterChange', function(event, slick, currentSlide) {
+            updateSliderCounter(slick, currentSlide);
+
+            if ($slider.find('.slick-prev').hasClass('slick-disabled')) {
+                $slider.closest('.counter-slider__wrapper').find('.slider-prev').addClass('slick-disabled');
+            }
+            else {
+                $slider.closest('.counter-slider__wrapper').find('.slider-prev').removeClass('slick-disabled');
+            }
+
+            if ($slider.find('.slick-next').hasClass('slick-disabled')) {
+                $slider.closest('.counter-slider__wrapper').find('.slider-next').addClass('slick-disabled');
+            }
+            else {
+                $slider.closest('.counter-slider__wrapper').find('.slider-next').removeClass('slick-disabled');
+            }
+        });
     });
 
     // lazy load
