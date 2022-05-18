@@ -17,6 +17,9 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/purchase.html');
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/checkout.html');
+    require('./assets/templates/layouts/catalog.html');
+    require('./assets/templates/layouts/catalog-checked-filters.html');
+    require('./assets/templates/layouts/catalog-list.html');
 }
 
 // Depends
@@ -423,6 +426,68 @@ $(function () {
                 $slider.closest('.counter-slider__wrapper').find('.slider-next').removeClass('slick-disabled');
             }
         });
+    });
+
+    // catalog filters
+
+    $('.catalog-filer__title').click(function () {
+        $(this).toggleClass('active').next('.catalog-filter__body').toggle();
+    });
+
+    $('.cat-open').click(function () {
+        $(this).toggleClass('show').next('ul').toggle();
+    });
+
+    $('.catalog-filters__show-all').each(function () {
+        if ($(this).closest('.catalog-filter__body').find('.catalog-filters li').length > 10) {
+            $(this).closest('.catalog-filter__body').find('.catalog-filters__show-all').show();
+        }
+        else {
+            $(this).closest('.catalog-filter__body').find('.catalog-filters__show-all').hide();
+        }
+    });
+
+    $('.catalog-filters__show-all').click(function () {
+        $(this).html() == 'Показать все' ? $(this).html('Свернуть') : $(this).html('Показать все');
+        $(this).closest('.catalog-filter__body').find('.catalog-filters').toggleClass('all');
+    });
+
+    $('.catalog-btn__filters').click(function () {
+        $('.mob-filters').addClass('active');
+        $('body').addClass('filters-opened');
+    });
+
+    $('.catalog-btn__categories').click(function () {
+        $('.mob-categories').addClass('active');
+        $('body').addClass('filters-opened');
+    });
+
+    $(document).click(function () {
+        $('.catalog-mob__filters').removeClass('active');
+        $('body').removeClass('filters-opened');
+    });
+
+    $(document).on('click', '.catalog-mob__filters', function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.catalog-btn__filters', function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.catalog-btn__categories', function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.mob-filters__close', function () {
+        $('.catalog-mob__filters').removeClass('active');
+        $('body').removeClass('filters-opened');
+    });
+
+    // select
+
+    $('.select').SumoSelect({
+        forceCustomRendering: true
     });
 
     // lazy load
