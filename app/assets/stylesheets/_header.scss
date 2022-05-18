@@ -79,6 +79,7 @@
   &.focus.active{
     & .search-results {
       display: block !important;
+      box-shadow: 0px 0px 20px rgba(54, 164, 238, 0.2) !important;
     }
     
   }

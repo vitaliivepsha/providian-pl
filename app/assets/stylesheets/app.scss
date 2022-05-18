@@ -20,17 +20,25 @@ body{
   @include bp(md){
     display: block;
   }
-    &.open-search-results {
-      & .overlay {
-        visibility: visible;
-        opacity: 1;
-        z-index: 997;
-      }
-      & .header-bottom {
-        transition: opacity linear 0.2s, visibility linear 0.2s;
-        background: #d7d7d7;
-      }
+  &.open-search-results {
+    & .overlay {
+      visibility: visible;
+      opacity: 1;
+      z-index: 997;
     }
+    & .header-bottom {
+      transition: opacity linear 0.2s, visibility linear 0.2s;
+      background: #d7d7d7;
+    }
+  }
+  &.filters-opened{
+    .overlay{
+      top: 0;
+      z-index: 1001;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
   // &.open-menu{
   //   .overlay{
   //     z-index: 997;
@@ -229,7 +237,7 @@ height: 0;
     padding: 0;
     transform: none;
     z-index: 2;
-    pointer-events: all;
+    pointer-events: none;
     font-family: $default;
     @include bp(xs){
       top: 10px;
