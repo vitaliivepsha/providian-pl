@@ -20,6 +20,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/catalog.html');
     require('./assets/templates/layouts/catalog-checked-filters.html');
     require('./assets/templates/layouts/catalog-list.html');
+    require('./assets/templates/layouts/no-goods.html');
+    require('./assets/templates/layouts/thank-you.html');
 }
 
 // Depends
@@ -122,6 +124,47 @@ $(function () {
     });
 
     // ===========================
+    // chechout
+
+    // chechout goods del
+
+    $('.checkout-goods__item-close').click(function () {
+        $(this).closest('.checkout-goods__item').remove();
+    });
+
+    // chechout comment
+    $('.chechout-comment').hide();
+    $('.chechout-comment__btn').click(function () {
+        $('.chechout-comment').slideToggle();
+    });
+
+    // chechout form
+    $(".deliver-self").hide();
+    $(".select.delivery").change(function () {
+        var value = $(this).val(),
+
+            $nova = $(this).closest(".chechout-form").find(".deliver.deliver-nova"),
+            $self = $(this).closest(".chechout-form").find(".deliver.deliver-self");
+
+        if (value == "nova") {
+            $nova.show();
+        } else {
+            $nova.hide();
+        }
+
+        if (value == "self") {
+            $self.show();
+        } else {
+            $self.hide();
+        }
+    });
+
+    $(".obl.select").SumoSelect({
+        search: true,
+        searchText: "Найти",
+        noMatch: "Не найдено",
+        forceCustomRendering: true
+    });
 
     // faq
 
@@ -157,12 +200,12 @@ $(function () {
     // header-search
 
     /*$('.header-search').on('focusin', function () {
-        $(this).closest('.header-search__wrapper').addClass('focus');
-        $('body').addClass('open-search-results');
+            $(this).closest('.header-search__wrapper').addClass('focus');
+            $('body').addClass('open-search-results');
     });*/
     /*$('.header-search').on('focusout', function () {
-        $(this).closest('.header-search__wrapper').removeClass('focus');
-        $('body').removeClass('open-search-results');
+            $(this).closest('.header-search__wrapper').removeClass('focus');
+            $('body').removeClass('open-search-results');
     });*/
 
     if ($('.header-search input[type="search"]').val().length) {
@@ -238,16 +281,16 @@ $(function () {
         currentIndex = 0;
 
     /*function jumpTo() {
-        if ($results.length) {
-            var position,
-                $current = $results.eq(currentIndex);
-            $results.removeClass(currentClass);
-            if ($current.length) {
-                $current.addClass(currentClass);
-                position = $current.offset().top - offsetTop;
-                window.scrollTo(0, position);
+            if ($results.length) {
+                    var position,
+                            $current = $results.eq(currentIndex);
+                    $results.removeClass(currentClass);
+                    if ($current.length) {
+                            $current.addClass(currentClass);
+                            position = $current.offset().top - offsetTop;
+                            window.scrollTo(0, position);
+                    }
             }
-        }
     }*/
 
     $input.on('input', function () {

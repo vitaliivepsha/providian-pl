@@ -20,6 +20,9 @@ body{
   @include bp(md){
     display: block;
   }
+  &.sumoStopScroll {
+    overflow: unset;
+  }
   &.open-search-results {
     & .overlay {
       visibility: visible;
@@ -341,3 +344,5 @@ height: 0;
 @import 'purchase';
 @import 'faq';
 @import 'checkout';
+@import 'no-goods';
+@import 'thank-you';
