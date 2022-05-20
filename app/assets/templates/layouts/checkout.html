@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Providian</title>
+  <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
+  <meta name="theme-color" content="#0B4899">
+  <meta name="msapplication-navbutton-color" content="#0B4899">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0B4899">
+</head>
+
+<body id="main">
+  ${require('../parts/header.html')}
+  <div class="header-spacer"></div>
+  <main class="main">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="javascript:void(0)">Главная</a>
+        <span>Оформление заказа</span>
+        </ul>
+      </div>
+    </div>
+    <div class="page-head">
+      <h1 class="page-head__title">Оформление заказа</h1>
+    </div>
+    <div class="checkout-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+            <div class="checkout-order checkout-order--form">
+              <span class="checkout-order__title">Оформить заказ</span>
+
+              <form class="chechout-form ajax_form clear-styles">
+                <div class="input-wrapper">
+                  <label>ФИО</label>
+                  <input class="input" type="text" name="full-name" data-title="ФИО"
+                    data-validate-required="Обязательное поле" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="input-wrapper">
+                  <label>E-mail</label>
+                  <input class="input" type="text" name="email" data-title="Email" placeholder="email@domail.com"
+                    data-validate-required="Обязательное поле">
+                </div>
+                <div class="input-wrapper">
+                  <label>Ваш телефон</label>
+                  <input class="input" type="text" name="phone" data-title="Телефон"
+                    data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер"
+                    placeholder="+38 (__) ___ __ __">
+                </div>
+                <div class="input-wrapper">
+                  <label>Способ доставки</label>
+                  <select class="select delivery">
+                    <option selected value="nova">Новая почта</option>
+                    <option value="self">Самовывоз</option>
+                  </select>
+                </div>
+                <div class="deliver deliver-nova">
+                  <div class="input-wrapper">
+                    <label>Область</label>
+                    <select class="select obl">
+                      <option disabled selected>Выбрать</option>
+                      <option>Область 1</option>
+                      <option>Область 2</option>
+                      <option>Область 3</option>
+                      <option>Область 3</option>
+                      <option>Область 4</option>
+                      <option>Область 5</option>
+                      <option>Область 6</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Город</label>
+                    <select class="select obl">
+                      <option disabled selected>Выбрать</option>
+                      <option>Город 1</option>
+                      <option>Город 2</option>
+                      <option>Город 3</option>
+                      <option>Город 4</option>
+                      <option>Город 5</option>
+                      <option>Город 6</option>
+                      <option>Город 7</option>
+                      <option>Город 8</option>
+                      <option>Город 9</option>
+                      <option>Город 10</option>
+                      <option>Город 11</option>
+                      <option>Город 12</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Отделение</label>
+                    <select class="select obl">
+                      <option disabled selected>Выбрать</option>
+                      <option>Отделение 1</option>
+                      <option>Отделение 2</option>
+                      <option>Отделение 3</option>
+                      <option>Отделение 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="deliver deliver-self">
+                  <div class="input-wrapper">
+                    <label>Город</label>
+                    <input class="input" type="text" name="city" data-title="Город" placeholder="Город">
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Улица</label>
+                    <input class="input" type="text" name="country" data-title="Улица" placeholder="Улица">
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Дом</label>
+                    <input class="input" type="text" name="house" data-title="Дом" placeholder="Дом">
+                  </div>
+                  <div class="input-wrapper">
+                    <label>Квартира</label>
+                    <input class="input" type="text" name="room" data-title="Квартира" placeholder="Квартира">
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label>Способ оплаты</label>
+                  <select class="select">
+                    <option selected>Наложенный платеж</option>
+                    <option>Оплата картой</option>
+                  </select>
+                </div>
+                <div class="input-wrapper chechout-comment">
+                  <label>Сообщение</label>
+                  <textarea class="textarea" name="message" data-title="Сообщение"
+                    placeholder="Напишите сообщение"></textarea>
+                </div>
+                <div class="chechout-form__footer">
+                  <span class="chechout-comment__btn">Ваш комментарий</span>
+                  <button class="btn" type="submit">Оформить заказ</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+            <div class="checkout-order checkout-order--goods">
+              <span class="checkout-order__title">Ваш заказ</span>
+              <div class="checkout-goods">
+                <div class="checkout-goods__item">
+                  <div class="checkout-goods__wrapper">
+                    <div class="checkout-goods__item-pic">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/checkout-goods-01.webp"
+                          class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/checkout-goods-01.jpg"
+                          class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/checkout-goods-01.jpg"
+                          class="lazy" alt="">
+                      </picture>
+                    </div>
+                    <div class="checkout-goods__item-about">
+                      <a href="javascript:void(0)">Аппарат ИВЛ Drager Evita 2 Dura</a>
+                      <span>04093485</span>
+                      <div class="checkout-goods__item-price">12000 грн</div>
+                    </div>
+
+                  </div>
+                  <div class="checkout-goods__item-counter">
+                    <div class="quantity">
+                      <button class="minus" type="button">-</button>
+                      <input class="value" value="1" type="text">
+                      <button class="plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <span class="checkout-goods__item-close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="6" cy="6" r="6" fill="#BBBBBB" />
+                      <path d="M3.36719 3.43359L8.63505 8.56782" stroke="white" />
+                      <path d="M8.56641 3.36719L3.43218 8.63505" stroke="white" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="checkout-goods__item">
+                  <div class="checkout-goods__wrapper">
+                    <div class="checkout-goods__item-pic">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/checkout-goods-01.webp"
+                          class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/checkout-goods-01.jpg"
+                          class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/checkout-goods-01.jpg"
+                          class="lazy" alt="">
+                      </picture>
+                    </div>
+                    <div class="checkout-goods__item-about">
+                      <a href="javascript:void(0)">Аппарат ИВЛ Drager Evita 2 Dura</a>
+                      <span>04093485</span>
+                      <div class="checkout-goods__item-price">17000 грн</div>
+                    </div>
+
+                  </div>
+                  <div class="checkout-goods__item-counter">
+                    <div class="quantity">
+                      <button class="minus" type="button">-</button>
+                      <input class="value" value="1" type="text">
+                      <button class="plus" type="button">+</button>
+                    </div>
+                  </div>
+                  <span class="checkout-goods__item-close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="6" cy="6" r="6" fill="#BBBBBB" />
+                      <path d="M3.36719 3.43359L8.63505 8.56782" stroke="white" />
+                      <path d="M8.56641 3.36719L3.43218 8.63505" stroke="white" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="checkout-order__footer">
+                <div class="checkout-order__total">
+                  <span>Итого к оплате</span>
+                  <div>
+                    <span>сумма</span>
+                    <strong>36000 грн</strong>
+                  </div>
+                </div>
+                <div class="checkout-order__footnote">Без учета стоимости доставки</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  ${require('../parts/footer.html')}
+  <div class="mfp-hide">
+
+  </div>
+
+</body>
+
+</html>

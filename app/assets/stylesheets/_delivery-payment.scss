@@ -88,13 +88,14 @@
   margin-top: 35px;
   padding-left: 10px;
   font-weight: 600;
-    font-size: 14px;
-    line-height: 150%;
-    text-transform: uppercase;
-    color: $text;
-    @media (max-width: 574px) {
-      margin-top: 23px;
-        font-size: 12px;
-      }
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: $text;
+
+  @media (max-width: 574px) {
+    margin-top: 23px;
+    font-size: 12px;
+  }
 }
 
