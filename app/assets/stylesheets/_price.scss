@@ -1,0 +1,246 @@
+.price-goods__main{
+  margin: 20px auto 0;
+  width: 730px;
+  max-width: 100%;
+}
+
+.price-goods__category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: max-content;
+  margin: 0 auto 30px;
+  @include bp(xs){
+    margin-bottom: 20px;
+  }
+  span{
+    font-size: 14px;
+    line-height: 19px;
+    color: $blue-mid;
+    text-transform: uppercase;
+  }
+}
+
+.price-goods__cat-btn{
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba($text, .7);
+  i{
+    width: 24px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 9px;
+  }
+}
+
+.price-goods__cat-list{
+  display: none;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(54, 164, 238, 0.2) !important;
+  border-radius: 5px;
+  right: 0;
+  top: calc(100% + 5px);
+  width: 180px;
+  max-height: 205px;
+  overflow: auto;
+  &.active{
+    display: block;
+  }
+  &::-webkit-scrollbar {
+    overflow-y: scroll;
+    background: transparent;
+    width: 3px;
+    transition: linear .2s;
+    box-shadow: 1px 0 0 transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $blue-mid;
+    border-radius: 0;
+    width: 1px;
+    transition: linear .2s;
+    cursor: grab;
+  }
+  a{
+    font-size: 12px;
+    line-height: 14px;
+    padding: 5px 10px;
+    display: block;
+    color: $text;
+    text-decoration: none;
+    &:hover{
+      color: $blue-mid;
+    }
+  }
+}
+
+.price-goods{
+  .col{
+    padding: 0 10px;
+    flex: 0 1 auto;
+    &.price-goods__photo{
+      width: 105px;
+      min-width: 105px;
+      max-width: 105px;
+      padding-left: 25px;
+      @include bp(sm){
+        display: none;
+      }
+    }
+    &.price-goods__name{
+      width: 325px;
+    }
+    &.price-goods__availibility{
+      width: 140px;
+      min-width: 140px;
+      @include bp(xs){
+        display: none;
+      }
+    }
+    &.price-goods__price{
+      width: 145px;
+      min-width: 145px;
+      @include bp(xs){
+        width: 110px;
+        min-width: 110px;
+      }
+    }
+  }
+  +.pagination{
+    margin-top: 40px;
+    @include bp(xs){
+      margin-top: 20px;
+    }
+  }
+}
+
+.price-goods__head{
+  display: flex;
+  background-color: $grey;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  .col{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.price-goods__item{
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  border: 1px solid transparent;
+  border-bottom-color: rgba($text, 0.2);
+  color: $text;
+  text-decoration: none;
+  margin-top: -1px;
+  position: relative;
+  @include bp(xs){
+    align-items: flex-start;
+  }
+  &:hover, &:focus{
+    z-index: 1;
+    background-color: #fff;
+    text-decoration: none;
+    color: $text;
+    border-color: $blue-mid;
+    border-radius: 5px;
+    .price-goods__photo{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+  .price-goods__photo{
+    picture{
+      width: 100%;
+      height: 55px;
+      display: flex;
+      border-radius: 5px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: linear .2s;
+      }
+    }
+  }
+  .price-goods__name{
+    @include bp(xs){
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    p{
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 0;
+    }
+    span{
+      display: block;
+      font-size: 14px;
+      line-height: 19px;
+      margin-top: 7px;
+      @include bp(xs){
+        margin-top: 4px;
+      }
+    }
+  }
+  .price-goods__availibility{
+    span{
+      font-size: 11px;
+      line-height: 15px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &.available{
+        color: $blue-mid;
+        &:before{
+          background-color: $blue-mid;
+        }
+      }
+      &.not-available{
+        color: $text;
+        &:before{
+          background-color: $text;
+        }
+      }
+      &.on-order{
+        color: $red;
+        &:before{
+          background-color: $red;
+        }
+      }
+      &:before{
+        display: block;
+        position: relative;
+        top: 1px;
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        margin-right: 6px;
+      }
+    }
+  }
+  .price-goods__price{
+    font-size: 16px;
+    line-height: 22px;
+    @include bp(xs){
+      padding-right: 5px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
