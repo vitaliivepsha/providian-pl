@@ -16,6 +16,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/catalog.html');
     require('./assets/templates/layouts/catalog-checked-filters.html');
     require('./assets/templates/layouts/catalog-list.html');
+    require('./assets/templates/layouts/search-results.html');
+    require('./assets/templates/layouts/price.html');
 }
 
 // Depends
@@ -476,6 +478,24 @@ $(function () {
 
     $('.select').SumoSelect({
         forceCustomRendering: true
+    });
+
+    // price categories
+
+    $('.price-goods__cat-btn').on('click', function(){
+        $('.price-goods__cat-list').toggleClass('active');
+    });
+
+    $(document).click(function() {
+        $('.price-goods__cat-list').removeClass('active');
+    });
+
+    $(document).on('click', '.price-goods__cat-list', function(e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.price-goods__cat-btn', function(e) {
+        e.stopPropagation();
     });
 
     // lazy load
