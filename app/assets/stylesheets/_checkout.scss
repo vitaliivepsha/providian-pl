@@ -498,6 +498,10 @@
       background-color: #f7f7f7;
     }
 
+    &.disabled.selected {
+      display: none;  
+    }
+
 
     & label {
       margin-bottom: 0;

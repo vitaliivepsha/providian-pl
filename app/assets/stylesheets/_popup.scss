@@ -6,9 +6,9 @@
 .popup{
   position: relative;
   margin: 0 auto;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
+  background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(56, 56, 56, 0.2);
+    border-radius: 5px;
   .mfp-close{
     width: 20px;
     height: 20px;
@@ -25,7 +25,7 @@
     }
     &:hover{
       &:before, &:after{
-        background-color: $red;
+        background-color: $blue-mid;
       }
     }
     &:before{
@@ -33,61 +33,80 @@
       content: '';
       width: 12px;
       height: 1px;
-      background-color: $blue;
+      background-color: $text;
       transform: rotate(-45deg);
       top: 9px;
       left: 4px;
+      transition: background-color linear 0.2s; 
     }
     &:after{
       position: absolute;
       content: '';
       width: 12px;
       height: 1px;
-      background-color: $blue;
+      background-color: $text;
       transform: rotate(45deg);
       top: 9px;
       left: 4px;
+      transition: background-color linear 0.2s;
     }
   }
 }
 
-.photo-popup{
-  width: 850px;
+.photo-popup {
+  width: 847px;
   max-width: 100%;
-  padding: 25px 55px 20px;
-  @include bp(md){
-    width: 100vw;
+  padding: 25px 47px 43px;
+
+  .mfp-close {
+    top: -20px;
+    right: -22px;
+
+    @include bp(md) {
+      right: 0;
+      top: -30px;
+    }
+  }
+
+  @include bp(md) {
+    width: calc(100vw - 30px);
     max-width: 100vw;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  @include bp(sm){
+
+  @include bp(sm) {
     padding: 25px 20px;
   }
-  @include bp(xs){
+
+  @include bp(xs) {
     padding: 20px 15px;
   }
 }
 
 .photo-popup__counter{
-  font-style: italic;
-  font-size: 12px;
-  line-height: 130%;
-  color: $blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: $blue-mid;
   margin-bottom: 5px;
-  @include bp(xs){
-    font-size: 10px;
-  }
 }
 
 .photo-popup__title{
   font-family: $default;
   display: block;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #383838;
   margin-bottom: 14px;
   @include bp(xs){
     margin-bottom: 10px;
@@ -99,32 +118,41 @@
 .photo-slider{
   border-radius: 5px;
   width: 100%;
-  height: 500px;
+  height: 450px;
   overflow: hidden;
   background-color: $grey;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   @include bp(sm){
     height: 76vw;
   }
   .slick-arrow{
     position: absolute;
     z-index: 3;
-    top: 50%;
-    transform: translateY(-50%);
+   bottom: 28px;
     border: none;
     display: flex;
     padding: 0;
     margin: 0;
     font-size: 0;
-    background-color: transparent;
-    @include bp(sm){
-      display: none;
-      opacity: 0;
-    }
+    background-color: $text;
+      flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        font-style: normal;
+        opacity: 0.5;
+        transition: opacity linear 0.2s;
+        @media (max-width: 574px) {
+          bottom: 15px;
+        }
     &:hover{
+      opacity: 1;
       svg{
         >*{
-          fill: $blue;
+          fill: #fff;
         }
       }
     }
@@ -135,61 +163,12 @@
       right: 20px;
     }
     &.slick-disabled{
-      opacity: .5;
+      opacity: .3;
       pointer-events: none;
     }
     svg{
       >*{
         transition: linear .2s;
-      }
-    }
-  }
-  .slick-dots{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    bottom: 20px;
-    padding: 0 20px;
-    @include bp(sm){
-      bottom: 10px;
-      padding: 0 10px;
-    }
-    li{
-      margin: 3.5px;
-      opacity: .5;
-      display: flex;
-      @include bp(sm){
-        margin: 2.5px;
-      }
-      &.slick-active{
-        opacity: 1;
-        button{
-          width: 20px;
-          height: 20px;
-          @include bp(sm){
-            width: 15px;
-            height: 15px;
-          }
-        }
-      }
-      button{
-        border: none;
-        padding: 0;
-        margin: 0;
-        font-size: 0;
-        background-color: #fff;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        transition: linear .2s;
-        @include bp(sm){
-          width: 8px;
-          height: 8px;
-        }
       }
     }
   }
@@ -213,59 +192,29 @@
       img{
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
       }
     }
   }
 }
 
-.photo-popup__descr{
-  font-size: 14px;
-  line-height: 150%;
-  margin-bottom: 15px;
-  @include bp(xs){
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-  >*{
-    margin-bottom: 10px;
-    &:last-child{
+.photo-popup__descr {
+  & p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $text;
+    margin-bottom: 15px;
+
+    &:last-child {
       margin-bottom: 0;
+    }
+
+    @include bp(xs) {
+      font-size: 12px;
+      margin-bottom: 10px;
     }
   }
 }
 
-.photo-popup__footer{
-  display: flex;
-  justify-content: space-between;
-}
-
-.photo-gallery__btn{
-  width: 100px;
-  height: 45px;
-  background: $blue;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid $blue;
-  color: #fff;
-  font-weight: 600;
-  font-size: 14px;
-  font-family: $default;
-  @include bp(xs){
-    height: 40px;
-    font-size: 12px;
-  }
-  &:hover{
-    background-color: $red;
-    border-color: $red;
-  }
-  &.slick-disabled{
-    background-color: #fff;
-    color: $blue;
-    cursor: default;
-    pointer-events: none;
-  }
-}

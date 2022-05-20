@@ -15,6 +15,10 @@
 
 .cat-all {
   position: relative;
+
+  & .cat-all__main i {
+    margin-top: 2px;
+  }
   
 &.open {
     & .cat-all__inner {
@@ -34,6 +38,9 @@
   padding-right: 20px;
   padding-bottom: 2px;
   cursor: pointer;
+  @media (max-width: 574px) {
+    padding-right: 0;
+  }
 
   &:hover {
     & span:nth-child(1) {
@@ -52,10 +59,17 @@
 
   & span:nth-child(2) {
     margin-right: 19px;
+    max-width:200px;
     font-size: 14px;
     line-height: 19px;
     color: $text;
     opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media (max-width: 359px) {
+      max-width: 100%;
+    }
   }
 
   & i {
@@ -237,6 +251,9 @@
 
 .blog-content {
     margin-bottom: 67px;
+    @media (max-width: 991px) {
+     margin-bottom: 0;
+    }
 }
 
 .blog-list {
@@ -258,7 +275,7 @@
 .blog-aside {
   margin-bottom: 67px;
   @media (max-width: 991px) {
-   margin-top: 40px;
+   margin-top: 0;
    margin-bottom: 40px;
    width: 100%;
   }
@@ -373,7 +390,7 @@
     text-decoration: none;
     &:hover {
       & span {
-        color: $blue-mid2;
+        opacity: 0.7;
       }
     }
 
@@ -388,6 +405,14 @@
       color: $text;
       opacity: 0.5;
     }
+    & b {
+      font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        color: $blue-mid;
+    }
 
     & span {
       display: block;
@@ -396,7 +421,7 @@
       display: flex;
       align-items: center;
       color: $text;
-      transition: color linear 0.2s;
+      transition: opacity linear 0.2s;
     }
   }
 }
@@ -589,6 +614,24 @@ font-size: 12px;
     & i {
       background-color: $text;
       transition: linear 0.2s;
+    }
+  }
+}
+
+.photo-gallery-category-list {
+  & .blog-item {
+    position: relative;
+    .blog-item__pic {
+      @media (max-width: 767px) {
+            height: auto;
+      }
+    }
+    & i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
     }
   }
 }
