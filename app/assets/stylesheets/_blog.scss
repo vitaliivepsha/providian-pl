@@ -524,6 +524,22 @@ margin-bottom: 8px;
       object-fit: contain;
     }
   }
+  &.video {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      & svg {
+        opacity: 0.7;
+      }
+    }
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity linear 0.2s;
+    }
+  }
 }
 
 .blog-article__text {

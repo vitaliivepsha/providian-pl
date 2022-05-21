@@ -27,6 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/photo-gallery.html');
     require('./assets/templates/layouts/photo-gallery-category.html');
     require('./assets/templates/layouts/video-gallery.html');
+    require('./assets/templates/layouts/video-gallery-article.html');
 }
 
 // Depends
@@ -129,6 +130,15 @@ $(function () {
     });
 
     // ===========================
+
+    // video gallery
+    $(".video-popup").on("click", function (e) {
+        $(this).find("img").hide();
+        $(this).find("svg").hide();
+        $(this).find("iframe").show();
+        $(this).find("iframe")[0].src += "?autoplay=1";
+        e.preventDefault();
+    });
 
     // photo slider navigation
 
@@ -618,19 +628,19 @@ $(function () {
 
     // price categories
 
-    $('.price-goods__cat-btn').on('click', function(){
+    $('.price-goods__cat-btn').on('click', function () {
         $('.price-goods__cat-list').toggleClass('active');
     });
 
-    $(document).click(function() {
+    $(document).click(function () {
         $('.price-goods__cat-list').removeClass('active');
     });
 
-    $(document).on('click', '.price-goods__cat-list', function(e) {
+    $(document).on('click', '.price-goods__cat-list', function (e) {
         e.stopPropagation();
     });
 
-    $(document).on('click', '.price-goods__cat-btn', function(e) {
+    $(document).on('click', '.price-goods__cat-btn', function (e) {
         e.stopPropagation();
     });
 
