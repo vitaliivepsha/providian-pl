@@ -130,19 +130,24 @@ $(function () {
     });
 
     // ===========================
-    // mobile menu
-    // $('.mobile-menu li.has-children a').click(function () {
-    //     $(this).next('.mobile-submenu').show();
-    //     $('.mobile-menu__wrapper').addClass('on-top');
-    // });
 
-    // $('.menu-back').click(function () {
-    //     $(this).closest('.mobile-submenu').hide();
-    //     if ($(this).hasClass('first-level')) {
-    //         $('.mobile-menu__wrapper').removeClass('on-top');
-    //     }
-    // });
+    $('.header-mob__tel').on('click', function () {
+        $(this).closest('.header-mob').toggleClass('show-tel');
+    });
 
+    $(document).click(function () {
+        $('.header-mob').removeClass('show-tel');
+    });
+
+    $(document).on('click', '.header-mob__tel', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.header-mob', function (e) {
+        e.stopPropagation();
+    });
+
+
+    // mobile-menu
     $('.mobile-menu__list .has-children.lvl1 > span > i ').click(function () {
         $('body').addClass('mm-lvl2');
         $(this).parent().next('.mobile-menu__lvl2').addClass('show');
@@ -172,28 +177,6 @@ $(function () {
         $('body').removeClass('mm-lvl4');
         $('.mobile-menu__lvl4').removeClass('show');
     });
-
-    // dfgdfg
-
-    // $('.mobile-menu__list .has-children.lvl2 > span').click(function () {
-    //     $('body').addClass('mm-lvl3');
-    //     $(this).next('.mobile-menu__lvl3').addClass('show');
-    // });
-
-    // $('.mobile-menu__list .menu-back.lvl3').click(function () {
-    //     $('body').removeClass('mm-lvl3');
-    //     $('.mobile-menu__lvl3').removeClass('show');
-    // });
-
-    // $('.mobile-menu__list .has-children.lvl3 > span').click(function () {
-    //     $('body').addClass('mm-lvl4');
-    //     $(this).next('.mobile-menu__lvl4').addClass('show');
-    // });
-
-    // $('.mobile-menu__list .menu-back.lvl4').click(function () {
-    //     $('body').removeClass('mm-lvl4');
-    //     $('.mobile-menu__lvl4').removeClass('show');
-    // });
 
 
     // mobile btn

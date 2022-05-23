@@ -21,7 +21,18 @@ body {
     display: block;
   }
 
+  &.fixed-header {
+    & .header-mob.show-tel {
+      & .header-mob__tel-inner {
+          top: -300%;
+        }
+    }
+  }
+
     &.open-mobile-menu {
+      & .header-mob__tel {
+          display: none;
+        }
       @media (max-width: 991px) {
          overflow: hidden;
       }
