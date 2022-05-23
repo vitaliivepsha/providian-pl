@@ -1450,6 +1450,44 @@
               </div>
           </div>
       </div>
+      <div class="popup popup-service" id="popup-consult">
+          <div class="mfp-close"></div>
+          <div class="cart-popup__header">Консультация</div>
+          <div class="cart-popup__body">
+              <div class="checkout-goods__item">
+                  <div class="checkout-goods__wrapper">
+                      <div class="checkout-goods__item-pic">
+                          <picture>
+                              <source srcset="../../images/pixel.webp" data-original="../../images/checkout-goods-01.webp"
+                                      class="lazy-web" type="image/webp">
+                              <source srcset="../../images/pixel.jpg" data-original="../../images/checkout-goods-01.jpg"
+                                      class="lazy-web" type="image/jpg">
+                              <img src="../../images/pixel.jpg" data-original="../../images/checkout-goods-01.jpg"
+                                   class="lazy" alt="">
+                          </picture>
+                      </div>
+                      <div class="checkout-goods__item-about">
+                          <a href="javascript:void(0)">Аппарат ИВЛ Drager Evita 2 Dura</a>
+                          <span>04093485</span>
+                          <div class="checkout-goods__item-price">12000 грн</div>
+                      </div>
+                  </div>
+              </div>
+              <form class="popup-service__form ajax_form" data-error-title="Ошибка отправки!"
+                    data-error-message="Попробуйте отправить заявку через некоторое время." data-success-title="Спасибо за ваше обращение!"
+                    data-success-message="Наш менеджер свяжется с вами в ближайшее время.">
+                  <p>Введите телефон и менеджер проконсультирует Вас по данной позиции. Приятных покупок!</p>
+                  <div class="popup-service__form-inner">
+                      <label>Ваш телефон</label>
+                      <div class="input-wrapper">
+                          <input type="text" class="input" name="phone" placeholder="+38 (___) ___-__-__" data-title="Телефон"
+                                 data-validate-required="Обязательное поле" data-validate-uaphone="Неправильный номер">
+                      </div>
+                      <button class="btn btn-b" type="submit">Получить консультацию</button>
+                  </div>
+              </form>
+          </div>
+      </div>
   </div>
 
 </body>

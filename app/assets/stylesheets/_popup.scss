@@ -515,17 +515,19 @@ border-radius: 5px;
 
 .popup-service{
   background-color: $grey;
-  width: 500px;
+  box-shadow: 0 0 20px rgba(56, 56, 56, 0.2) !important;
+  width: 650px;
   max-width: calc(100vw - 30px);
   >.mfp-close{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #fff;
-    top: 0;
-    right: -40px;
+    top: -20px;
+    right: -48px;
     font-size: 0;
     opacity: 1;
+    cursor: pointer;
     @include bp(md){
       box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
       top: -30px;
@@ -533,7 +535,7 @@ border-radius: 5px;
     }
     &:hover{
       &:before, &:after{
-        background-color: $red;
+        background-color: $blue-mid;
       }
     }
     &:before{
@@ -541,81 +543,34 @@ border-radius: 5px;
       content: '';
       width: 12px;
       height: 1px;
-      background-color: $blue;
+      background-color: $text;
       transform: rotate(-45deg);
       top: 9px;
       left: 4px;
+      pointer-events: none;
     }
     &:after{
       position: absolute;
       content: '';
       width: 12px;
       height: 1px;
-      background-color: $blue;
+      background-color: $text;
       transform: rotate(45deg);
       top: 9px;
       left: 4px;
+      pointer-events: none;
     }
   }
-}
-
-.popup-service__title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px 15px 25px;
-  @include bp(xs){
-    padding: 15px;
-  }
-  .section-title{
-    color: $blue;
-    span, h1{
-      font-size: inherit;
-      margin: 0;
-      padding: 0 15px;
-      position: relative;
-      @include bp(lg){
-        display: inline-block;
-      }
-      &:before{
-        position: absolute;
-        content: '';
-        left: 0;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        top: 11px;
-        background-color: $red;
-        @include bp(xs){
-          top: 7px;
-        }
-      }
-      &:after{
-        position: absolute;
-        content: '';
-        right: 0;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        top: 11px;
-        background-color: $red;
-        @include bp(xs){
-          top: 7px;
-        }
+  .cart-popup__body{
+    max-height: unset;
+    overflow: visible;
+    padding-bottom: 30px;
+    .checkout-goods__wrapper{
+      @include bp(xs){
+        margin: 0;
       }
     }
-  }
-}
-
-.popup-service__body{
-  padding: 0 15px 35px;
-  @include bp(xs){
-    padding: 0 10px 35px;
-  }
-  .cart-item{
-    margin-bottom: 20px;
-    >a{
+    .checkout-goods__item{
       @include bp(xs){
         padding-bottom: 10px;
       }
@@ -623,36 +578,57 @@ border-radius: 5px;
   }
 }
 
-.popup-service__descr{
-  text-align: center;
-  font-size: 14px;
-  line-height: 18px;
-  margin: 0 auto 20px;
-  width: calc(100% - 30px);
+.popup-service__form{
+  border: 1px solid #E4E3E4;
+  box-shadow: 0 0 20px #fff !important;
+  border-radius: 5px;
+  padding: 20px 15px 26px;
+  >p{
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    width: 374px;
+    max-width: 100%;
+    margin: 0 auto 17px;
+    color: #333;
+    @include bp(xs){
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
 }
 
-.popup-service__form{
-  display: flex;
-  justify-content: space-between;
-  @include bp(xs){
-    flex-direction: column;
+.popup-service__form-inner{
+  width: 395px;
+  max-width: 100%;
+  margin: 0 auto;
+  >label{
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    color: rgba($text, .5);
   }
-  .input-wrapper{
-    width: 195px;
-    @include bp(xs){
-      width: 100%;
-      margin-bottom: 15px;
+  .input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #E4E3E4;
+    border-radius: 5px;
+    padding: 0 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: $text;
+    &::placeholder{
+      color: rgba($text, .5);
     }
   }
   .btn{
-    width: 260px;
-    min-width: unset;
-    @include bp(xs){
-      width: 100%;
-    }
+    width: 200px;
+    margin: 15px auto 0;
   }
 }
-
 
 .swal2-modal{
   width: 500px !important;
