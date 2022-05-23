@@ -609,17 +609,77 @@
 
 .header-mob {
   display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
   height: 50px;
   background-color: #fff;
- box-shadow: 0 0 10px rgba(56, 56, 56, 0.2) !important;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(56, 56, 56, 0.2) !important;
   transition: height linear 0.3s;
+
   @media (max-width: 991px) {
-    display: block; 
+    display: block;
+  }
+
+  &.show-tel {
+    & .header-mob__tel-inner {
+      top: 50px;
+    }
+
+    & .header-mob__tel {
+        & svg path {
+          fill: $blue-mid;
+        }
+    }
   }
 }
+
+// mobile-header
+.header-mob__tel {
+  cursor: pointer;
+  & svg path {
+    transition: fill linear 0.2s;
+  }
+  &:hover {
+     & svg path{
+    fill: $blue-mid;
+  }
+  }
+ 
+}
+
+.header-mob__tel-inner {
+  position: absolute;
+  top: -300%;
+  transition: top linear 0.2s;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  padding: 15px;
+  background-color: #fff;
+  & span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      color: $text;
+      font-weight: 600;
+  }
+  & a {
+    display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      color: $text;
+      & + a {
+        margin-top: 5px;
+      }
+  }
+}
+
+
+
 
 .header-mob__wrapper {
 display: flex;
@@ -631,6 +691,9 @@ justify-content: space-between;
       display: flex;
   justify-content: space-between;
   align-items: center;
+  &:last-child {
+    gap:15px;
+  }
   }
 }
 
