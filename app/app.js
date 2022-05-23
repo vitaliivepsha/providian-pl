@@ -69,23 +69,23 @@ $(function () {
 
     // fixed header
 
-    if ($(window).width() >= 991) {
-        var header = $('.header'),
-            scrollPrev = 0;
 
-        $(window).scroll(function () {
-            var scrolled = $(window).scrollTop();
+    var header = $('.header'),
+        scrollPrev = 0;
 
-            if (scrolled > 156 && scrolled) {
-                header.addClass('fixed');
-                $('body').addClass('fixed-header');
-            } else {
-                header.removeClass('fixed');
-                $('body').removeClass('fixed-header');
-            }
-            scrollPrev = scrolled;
-        });
-    }
+    $(window).scroll(function () {
+        var scrolled = $(window).scrollTop();
+
+        if (scrolled > 156 && scrolled) {
+            header.addClass('fixed');
+            $('body').addClass('fixed-header');
+        } else {
+            header.removeClass('fixed');
+            $('body').removeClass('fixed-header');
+        }
+        scrollPrev = scrolled;
+    });
+
 
     $(window).resize(function () {
         var count1 = $('.blog-slider .slick-slide.slick-cloned').length;
@@ -130,6 +130,88 @@ $(function () {
     });
 
     // ===========================
+    // mobile menu
+    // $('.mobile-menu li.has-children a').click(function () {
+    //     $(this).next('.mobile-submenu').show();
+    //     $('.mobile-menu__wrapper').addClass('on-top');
+    // });
+
+    // $('.menu-back').click(function () {
+    //     $(this).closest('.mobile-submenu').hide();
+    //     if ($(this).hasClass('first-level')) {
+    //         $('.mobile-menu__wrapper').removeClass('on-top');
+    //     }
+    // });
+
+    $('.mobile-menu__list .has-children.lvl1 > span > i ').click(function () {
+        $('body').addClass('mm-lvl2');
+        $(this).parent().next('.mobile-menu__lvl2').addClass('show');
+    });
+
+    $('.mobile-menu__list .menu-back.lvl2').click(function () {
+        $('body').removeClass('mm-lvl2');
+        $('.mobile-menu__lvl2').removeClass('show');
+    });
+
+    $('.mobile-menu__list .has-children.lvl2 > span > i ').click(function () {
+        $('body').addClass('mm-lvl3');
+        $(this).parent().next('.mobile-menu__lvl3').addClass('show');
+    });
+
+    $('.mobile-menu__list .menu-back.lvl3').click(function () {
+        $('body').removeClass('mm-lvl3');
+        $('.mobile-menu__lvl3').removeClass('show');
+    });
+
+    $('.mobile-menu__list .has-children.lvl3 > span > i ').click(function () {
+        $('body').addClass('mm-lvl4');
+        $(this).parent().next('.mobile-menu__lvl4').addClass('show');
+    });
+
+    $('.mobile-menu__list .menu-back.lvl4').click(function () {
+        $('body').removeClass('mm-lvl4');
+        $('.mobile-menu__lvl4').removeClass('show');
+    });
+
+    // dfgdfg
+
+    // $('.mobile-menu__list .has-children.lvl2 > span').click(function () {
+    //     $('body').addClass('mm-lvl3');
+    //     $(this).next('.mobile-menu__lvl3').addClass('show');
+    // });
+
+    // $('.mobile-menu__list .menu-back.lvl3').click(function () {
+    //     $('body').removeClass('mm-lvl3');
+    //     $('.mobile-menu__lvl3').removeClass('show');
+    // });
+
+    // $('.mobile-menu__list .has-children.lvl3 > span').click(function () {
+    //     $('body').addClass('mm-lvl4');
+    //     $(this).next('.mobile-menu__lvl4').addClass('show');
+    // });
+
+    // $('.mobile-menu__list .menu-back.lvl4').click(function () {
+    //     $('body').removeClass('mm-lvl4');
+    //     $('.mobile-menu__lvl4').removeClass('show');
+    // });
+
+
+    // mobile btn
+    $(".mobile-btn").on("click", function () {
+        $(this).toggleClass("active");
+        $('.mobile-menu').toggleClass('active');
+        $('body').toggleClass('open-mobile-menu');
+
+    });
+
+    // main menu
+    $('.header-nav li.has-menu').on('mouseover', function () {
+        $('body').addClass('open-menu');
+    });
+
+    $('.header-nav li.has-menu').on('mouseout', function () {
+        $('body').removeClass('open-menu');
+    });
 
     // video gallery
     $(".video-popup").on("click", function (e) {

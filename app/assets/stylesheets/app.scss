@@ -3,7 +3,7 @@
 @import 'fonts';
 @import 'mixin';
 
-body{
+body {
   min-width: 320px;
   color: $text;
   box-sizing: border-box;
@@ -17,31 +17,56 @@ body{
   display: flex;
   flex-direction: column;
   position: relative;
-  @include bp(md){
+  @include bp(md) {
     display: block;
   }
+
+    &.open-mobile-menu {
+      @media (max-width: 991px) {
+         overflow: hidden;
+      }
+     
+    }
+
+  &.open-menu {
+    & .overlay {
+      visibility: visible;
+      opacity: 1;
+      z-index: 997;
+    }
+
+    & .header-bottom {
+      transition: opacity linear 0.2s, visibility linear 0.2s;
+      background: #d7d7d7;
+    }
+  }
+
   &.sumoStopScroll {
     overflow: unset;
   }
+
   &.open-search-results {
     & .overlay {
       visibility: visible;
       opacity: 1;
       z-index: 997;
     }
+
     & .header-bottom {
       transition: opacity linear 0.2s, visibility linear 0.2s;
       background: #d7d7d7;
     }
   }
-  &.filters-opened{
-    .overlay{
+
+  &.filters-opened {
+    .overlay {
       top: 0;
       z-index: 1001;
       opacity: 1;
       visibility: visible;
     }
   }
+
   // &.open-menu{
   //   .overlay{
   //     z-index: 997;
@@ -83,8 +108,8 @@ body{
   //   }
   // }
   // 
-  
-  }
+
+}
 
 
 ol, ul {
