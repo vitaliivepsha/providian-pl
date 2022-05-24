@@ -21,13 +21,19 @@ body {
     display: block;
   }
 
-  &.fixed-header {
-    & .header-mob.show-tel {
-      & .header-mob__tel-inner {
-          top: -300%;
-        }
-    }
-  }
+   &.fixed-header {
+     & .header-mob.show-tel {
+       & .header-mob__tel-inner {
+         top: -300%;
+       }
+     }
+    
+     & .header-mob.show-search {
+       & .header-mob__search-inner {
+         top: -300%;
+       }
+     }
+   }
 
     &.open-mobile-menu {
       & .header-mob__tel {
@@ -78,50 +84,7 @@ body {
     }
   }
 
-  // &.open-menu{
-  //   .overlay{
-  //     z-index: 997;
-  //     opacity: 1;
-  //   }
-  // }
-  // &.mob-menu{
-  //   height: 100vh;
-  //   overflow: hidden;
-  //   .overlay{
-  //     z-index: 997;
-  //     opacity: 1;
-  //   }
-  //   .header-mob__phones-btn{
-  //     display: none;
-  //   }
-  // }
-  // &.mob-phones{
-  //   .overlay{
-  //     z-index: 997;
-  //     opacity: 1;
-  //   }
-  //   .mob-phones__wrapper{
-  //     display: block;
-  //   }
-  //   .header-mob__phones-btn{
-  //     background-color: $blue;
-  //     svg{
-  //       path{
-  //         fill: #fff;
-  //       }
-  //     }
-  //   }
-  // }
-  // &.mob-search{
-  //   .overlay{
-  //     z-index: 997;
-  //     opacity: 1;
-  //   }
-  // }
-  // 
-
 }
-
 
 ol, ul {
   list-style-type: none;
@@ -154,11 +117,6 @@ main{
     top: 0;
     left: 0;
   }
-  // &.active{
-  //   &:after{
-  //     display: block;
-  //   }
-  // }
 }
 
 .overlay {

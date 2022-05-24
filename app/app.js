@@ -131,8 +131,11 @@ $(function () {
 
     // ===========================
 
-    $('.header-mob__tel').on('click', function () {
+    $('.header-mob__tel > i').on('click', function () {
         $(this).closest('.header-mob').toggleClass('show-tel');
+        if ($('.header-mob').has('.show-search')) {
+            $('.header-mob').removeClass('show-search');
+        }
     });
 
     $(document).click(function () {
@@ -145,6 +148,28 @@ $(function () {
     $(document).on('click', '.header-mob', function (e) {
         e.stopPropagation();
     });
+
+
+
+    $('.header-mob__search > i').on('click', function () {
+        $(this).closest('.header-mob').toggleClass('show-search');
+        if ($('.header-mob').has('.show-tel')) {
+            $('.header-mob').removeClass('show-tel');
+        }
+    });
+
+    $(document).click(function () {
+        $('.header-mob').removeClass('show-search');
+    });
+
+    $(document).on('click', '.header-mob__search', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.header-mob', function (e) {
+        e.stopPropagation();
+    });
+
+
 
 
     // mobile-menu

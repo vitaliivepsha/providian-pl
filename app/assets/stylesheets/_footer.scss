@@ -76,6 +76,11 @@
       @media (max-width: 574px) {
        width: 100%;
       }
+      &:last-child {
+        @media (max-width: 574px) {
+            margin-bottom: 0;
+          }
+      }
   }
 
   & a, 
@@ -203,6 +208,7 @@ justify-content: space-between;
     color: $text;
     @media (max-width: 767px) {
      margin-bottom: 10px;
+     justify-content: center;
     }
     & a {
       padding-left: 3px;
@@ -216,7 +222,8 @@ justify-content: space-between;
   display: flex;
   align-items: center;
   @media (max-width: 767px) {
-   justify-content: flex-end;
+   justify-content: center;
+
   }
   & span {
     padding-right: 17px;
